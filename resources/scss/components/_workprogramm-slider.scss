@@ -1,0 +1,79 @@
+.workprog-slide {
+    position: relative;
+
+    &__content {
+        max-width: 490px;
+        padding: 105px 20px 50px;
+        background: rgba(196, 196, 196, .35);
+        backdrop-filter: blur(42px);
+        background-size: cover;
+        border-radius: 40px;
+        margin-left: auto;
+        z-index: 10;
+    }
+
+    &__title {
+        font-family: $ffGiga;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 160%;
+        color: $black;
+        margin-bottom: 30px;
+        max-width: 470px;
+        text-transform: uppercase;
+    }
+
+    &__text {
+        font-weight: 300;
+        color: $black;
+        max-width: 390px;
+    }
+
+    &__speaker {
+        font-weight: 500;
+        line-height: 150%;
+        margin-bottom: 20px;
+    }
+
+    &__img {
+        border-radius: 40px;
+        overflow: hidden;
+        width: 640px;
+        margin-top: -235px;
+        position: relative;
+        z-index: -1;
+
+        & > img {
+            display: block;
+            width: 100%;
+            height: 495px;
+            object-fit: cover;
+        }
+    }
+}
+
+.workprog-slider {
+
+    .slick-slide {
+        transition: .3s;
+
+        &:not(.slick-active) {
+            opacity: 0;
+            transform: scale(.7);
+        }
+    }
+
+    &-arrows {
+        position: absolute;
+        top: 55px;
+        right: 404px;
+        width: fit-content;
+        display: flex;
+
+        .arrow {
+            &--next {
+                margin-left: 10px;
+            }
+        }
+    }
+}

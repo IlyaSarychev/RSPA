@@ -310,3 +310,53 @@
         background: $white;
     }
 }
+
+.section-workprogramm {
+    background: $sky;
+    position: relative;
+    overflow: hidden;
+    padding: 100px 0;
+
+    .bg-gradient {
+        width: 1200px;
+        top: 70px;
+        left: -150px;
+        z-index: 5;
+    }
+
+    .title {
+        color: $black;
+    }
+
+    .wrapper {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 420px 1fr;
+        grid-column-gap: 20px;
+    }
+
+    .container {
+        z-index: 10;
+    }
+}
+
+.workprog-offer {
+    &__title {
+        margin-bottom: 30px;
+    }
+
+    &__text {
+        font-weight: 300;
+        color: #000;
+        max-width: 310px;
+        margin-bottom: 30px;
+    }
+}
+
+.workprog-slider-wrapper {
+    width: 100%;
+    position: relative;
+    min-width: 0;
+}
+
+@import '../components/workprogramm-slider';
