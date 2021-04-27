@@ -39,3 +39,12 @@ p {
         background: $turquoise;
     }
 }
+
+.title {
+    font-family: $ffGiga;
+    text-transform: uppercase;
+    color: $white;
+    font-size: 45px;
+    line-height: 140%;
+    font-weight: 700;
+}
