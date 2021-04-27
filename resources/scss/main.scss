@@ -1,5 +1,8 @@
+@import 'libs/normalize';
+@import 'vars';
 @import 'fonts';
-
-h1 {
-    font-family: 'Grtsk Giga';
-}
+@import 'global';
+@import 'components/container';
+@import 'components/header';
+@import 'components/footer';
+@import 'pages/index';

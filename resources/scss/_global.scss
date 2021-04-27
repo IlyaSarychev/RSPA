@@ -1,0 +1,41 @@
+* {
+    font-family: $ffM;
+    line-height: 130%;
+    font-weight: 300;
+}
+
+body {
+    background: $black;
+}
+
+a {
+    font-family: $ffM;
+    text-decoration: none;
+    color: $black;
+}
+
+p {
+    margin: 0;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    padding: 0 22px;
+    font-family: $ffGiga;
+    font-weight: 400;
+    color: $white;
+    font-size: 14px;
+    text-transform: uppercase;
+    background: none;
+    border: 1px solid $turquoise;
+    border-radius: 60px;
+    transition: .3s;
+
+    &:hover {
+        color: $black;
+        background: $turquoise;
+    }
+}
