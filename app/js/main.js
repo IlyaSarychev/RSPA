@@ -20,4 +20,34 @@ $(document).ready(function() {
     $('.workprog-slider-arrows .arrow--next').click(() => {
         workprogSlider.slick('slickNext')
     })
+
+    let guestprogSlider = $('.guestprog-slider').slick({
+        autoplay: false,
+        arrows: false
+    })
+
+    function changeSliderButtonsClasses(buttons, activeIdx) {
+        buttons.each((i, el) => {
+            if (i === activeIdx) {
+                $(el).addClass('active')
+            } else {
+                $(el).removeClass('active')
+            }
+        })
+    }
+
+    function bindButtonsToSlider(buttons, slider) {
+        buttons.each((i, el) => {
+            $(el).click(() => {
+                slider.slick('slickGoTo', i)
+                changeSliderButtonsClasses(buttons, i)
+            })
+        })
+
+        slider.on('afterChange', (slick, currentSlide) => {
+            changeSliderButtonsClasses(buttons, currentSlide.currentSlide)
+        })
+    }
+
+    bindButtonsToSlider($('.section-guestprogramm .slider-buttons__btn'), guestprogSlider)
 })
