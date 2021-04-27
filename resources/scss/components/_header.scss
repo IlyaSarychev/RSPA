@@ -4,6 +4,7 @@
     left: 0;
     width: 100%;
     z-index: 400;
+    transition: .3s;
 
     &__wrapper {
         width: 100%;
@@ -30,5 +31,10 @@
             display: block;
             max-width: 110px;
         }
+    }
+
+    &--scroll {
+        backdrop-filter: blur(42px);
+        background: rgba(196, 196, 196, .1);
     }
 }

@@ -47,4 +47,29 @@ p {
     font-size: 45px;
     line-height: 140%;
     font-weight: 700;
+    margin: 0;
+
+    &--nom {
+        position: relative;
+        &::before {
+            content: '';
+            display: block;
+            width: 160px;
+            height: 160px;
+            position: absolute;
+            right: -125px;
+            background: url('../img/nom-circle.svg');
+            background-repeat: no-repeat;
+            z-index: -1;
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+            animation: nom-circle 15s linear infinite;
+        }
+    }
+}
+
+h3.title {
+    font-size: 20px;
+    line-height: 160%;
 }

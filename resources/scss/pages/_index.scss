@@ -4,11 +4,6 @@
     position: relative;
     overflow: hidden;
 
-    .container {
-        z-index: 10;
-        position: relative;
-    }
-
     .wrapper {
         margin-top: 260px;
         display: grid;
@@ -21,6 +16,17 @@
         top: -33px;
         right: 0;
     }
+
+    .bg-gradient {
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+}
+
+.bg-gradient {
+    position: absolute;
+    z-index: 2;
 }
 
 .offer-wrapper {
@@ -28,14 +34,6 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-}
-
-.bg-gradient {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 2;
 }
 
 .dinamics {
@@ -116,5 +114,199 @@
         height: 485px;
         border-radius: 40px;
         overflow: hidden;
+    }
+}
+
+.section-nomination {
+    background: $blue;
+    padding: 100px 0 75px;
+    position: relative;
+    overflow: hidden;
+
+    .bg-gradient {
+        width: 1185px;
+        height: 660px;
+        left: -250px;
+        top: -245px;
+    }
+
+    .title-wrapper {
+        width: 100%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        margin-bottom: 40px;
+    }
+
+}
+
+@keyframes nom-circle {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.nom-date {
+    &__text {
+        text-align: right;
+        font-family: $ffM;
+        font-weight: 800;
+        line-height: 130%;
+        text-transform: uppercase;
+        color: $white;
+        opacity: .5;
+        margin-bottom: 5px;
+    }
+    &__date {
+        text-align: right;
+        font-family: $ffGiga;
+        font-size: 20px;
+        line-height: 160%;
+        text-transform: uppercase;
+        color: $white;
+    }
+}
+
+.noms {
+    width: 100%;
+    margin-bottom: 75px;
+}
+
+.nom-row {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 530px 310px 310px 1fr;
+    grid-column-gap: 20px;
+
+    &__title {
+        position: relative;
+    }
+
+    &__num {
+        position: absolute;
+        top: -15px;
+        left: 0;
+    }
+
+    &:not(:last-child) {
+        padding-bottom: 35px;
+        border-bottom: 1px solid rgba(255,255,255,.5);
+    }
+
+    &:not(:first-child) {
+        padding-top: 45px;
+    }
+
+    &__nom {
+        display: flex;
+        align-items: center;
+        color: $white;
+
+        &:before {
+            content: '';
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: $turquoise;
+            margin-right: 8px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 8px;
+        }
+    }
+
+    &:nth-child(3) {
+        .nom-row {
+            &__nom {
+                &::before {
+                    background: $pink;
+                }
+            }
+        }
+    }
+
+    &:nth-child(4) {
+        .nom-row {
+            &__nom {
+                &::before {
+                    background: $cold-blue;
+                }
+            }
+        }
+    }
+
+    &--first {
+        grid-template-columns: repeat(2, 1fr);
+
+        .nom-row {
+            &__title {
+                grid-column: 1 / 3;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+.b-nom {
+    height: 300px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 40px;
+    background: url(../img/nom-block.svg);
+    background-size: cover;
+    padding: 35px 30px;
+    box-sizing: border-box;
+
+    &__img {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    &__title {
+        margin: 0 0 20px;
+        color: $white;
+        font-family: $ffM;
+        font-weight: 800;
+        font-size: 16px;
+        line-height: 130%;
+        text-transform: uppercase;
+    }
+}
+
+.important {
+    position: relative;
+    padding-left: 10px;
+
+    &__title {
+        font-family: $ffM;
+        font-weight: 800;
+        line-height: 130%;
+        color: $white;
+        opacity: .5;
+        margin-bottom: 4px;
+    }
+
+    &__text {
+        font-family: $ffM;
+        color: $white;
+    }
+
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: -5px;
+        width: 5px;
+        height: 100%;
+        background: $white;
     }
 }
