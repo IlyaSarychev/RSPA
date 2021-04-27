@@ -2,14 +2,8 @@
     position: relative;
 
     &__content {
-        max-width: 490px;
-        padding: 105px 20px 50px;
-        background: rgba(196, 196, 196, .35);
-        backdrop-filter: blur(42px);
-        background-size: cover;
-        border-radius: 40px;
         margin-left: auto;
-        z-index: 10;
+        max-width: 490px;
     }
 
     &__title {
@@ -53,15 +47,6 @@
 }
 
 .workprog-slider {
-
-    .slick-slide {
-        transition: .3s;
-
-        &:not(.slick-active) {
-            opacity: 0;
-            transform: scale(.7);
-        }
-    }
 
     &-arrows {
         position: absolute;

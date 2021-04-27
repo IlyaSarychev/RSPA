@@ -360,3 +360,45 @@
 }
 
 @import '../components/workprogramm-slider';
+
+.section-guestprogramm {
+    background: $white;
+    padding: 120px 0;
+    position: relative;
+    overflow: hidden;
+
+    .title {
+        color: $black;
+        max-width: 475px;
+        position: absolute;
+        top: 40px;
+        z-index: 20;
+    }
+
+    .bg-gradient {
+        left: -265px;
+        top: -230px;
+    }
+
+    .wrapper {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 110px;
+    }
+
+    .slider-buttons {
+        justify-self: right;
+
+        &__btn {
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
+
+.guestprogramm-slider-wrapper {
+    min-width: 0;
+}
+
+@import '../components/guestprogramm-slider';

@@ -146,3 +146,71 @@ h3.title {
         }
     }
 }
+
+.slide-content {
+    padding: 105px 20px 50px;
+    background: rgba(196, 196, 196, .35);
+    backdrop-filter: blur(42px);
+    background-size: cover;
+    border-radius: 40px;
+    z-index: 10;
+}
+
+.slider-buttons {
+    &__btn {
+        font-family: $ffGiga;
+        font-weight: 400;
+        font-size: 10px;
+        width: 50px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: none;
+        text-transform: uppercase;
+        color: $black;
+        opacity: .7;  
+        border: none;
+        border-radius: 60px;
+        transition: .3s;
+
+        &:not(.active) {
+            position: relative;
+
+            &:after {
+                display: block;
+                position: absolute;
+                content: '';
+                width: 8px;
+                height: 0px;
+                border-bottom: 1px solid rgba(0,0,0,.7);
+                right: 0;
+            }
+        }
+
+        &.active {
+            opacity: 1;
+            border: 1px solid $black;
+
+            &:hover {
+                color: $white;
+                background: $black;
+            }
+        }
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+.slider-animation {
+    .slick-slide {
+        transition: .3s;
+
+        &:not(.slick-active) {
+            opacity: 0;
+            transform: scale(.7);
+        }
+    }
+}

@@ -1,0 +1,41 @@
+.guestprog-slide {
+    &__img {
+        max-width: 640px;
+        border-radius: 40px;
+        overflow: hidden;
+        margin-left: auto;
+
+        & > img {
+            display: block;
+            height: 500px;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__content {
+        width: 600px;
+        margin-top: -270px;
+        padding: 50px 20px;
+    }
+
+    &__title {
+        font-family: $ffGiga;
+        line-height: 160%;
+        text-transform: uppercase;
+        color: $black;
+        font-weight: 400;
+        max-width: 260px;
+        margin-bottom: 30px;
+        text-decoration: underline;
+        text-decoration-color: $turquoise;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 4px;
+    }
+
+    &__text {
+        font-family: $ffM;
+        color: $black;
+        font-weight: 300;
+    }
+}
