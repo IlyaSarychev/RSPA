@@ -1,3 +1,103 @@
 .footer {
-    
+    padding: 60px 0;
+    background: $black;
+
+    .wrapper {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 330px 410px 1fr;
+    }
+
+    .logo {
+        & > img {
+            width: 180px;
+        }
+    }
+
+    &-nav {
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 20px;
+        height: fit-content;
+        padding-top: 12px;
+        margin-bottom: 50px;
+
+        &__link {
+            color: $white;
+            font-weight: 300;
+            transition: .3s;
+            display: block;
+
+            &:hover {
+                opacity: .7;
+            }
+        }
+    }
+
+    &-contacts {
+        justify-self: end;
+        padding-top: 10px;
+
+        &__link {
+            color: $white;
+            text-transform: uppercase;
+            display: block;
+            text-align: right;
+            font-weight: 400;
+            font-family: $ffGiga;
+            transition: .3s;
+            
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+
+            &:hover {
+                opacity: .7;
+            }
+        }
+    }
+}
+
+.policy {
+    grid-column: 2 / 3;
+    color: $white;
+
+    &__policy {
+        color: $white;
+        opacity: .5;
+        transition: .3s;
+        margin-bottom: 20px;
+        display: block;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    &__rights {
+        opacity: .5;
+    }
+}
+
+.iskra {
+    justify-self: end;
+    display: flex;
+    align-items: center;
+    color: $white;
+    font-weight: 300;
+    transition: .3s;
+    opacity: .5;
+
+    &__text {
+        max-width: 90px;
+    }
+
+    &__img {
+        margin-left: 20px;
+    }
+
+    &:hover {
+        opacity: 1;
+    }
 }
