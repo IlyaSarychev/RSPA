@@ -43,5 +43,5 @@ function minifyImg() {
 }
 
 
-gulp.task('init', gulp.series('serve'));
+gulp.task('default', gulp.series('serve'));
 gulp.task('minify-images', gulp.series(minifyImg));
