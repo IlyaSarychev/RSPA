@@ -208,6 +208,11 @@
     .experts {
         display: flex;
         overflow-x: scroll;
+        // margin-left: -50vw;
+        // margin-right: -50vw;
+        // padding-left: 50vw;
+        // padding-right: 50vw;
+        width: initial;
     }
 
     .expert {

@@ -70,4 +70,22 @@ $(document).ready(function() {
     }
 
     bindButtonsToSlider($('.section-guestprogramm .slider-buttons__btn'), guestprogSlider)
+
+    function paddingsAndMarginsForMobileXScroll() {
+        let container = $('.container').width()
+        let vw = $(window).width()
+
+        $('.experts').css({
+            'margin-left': -(vw - container) / 2 + 'px',
+            'margin-right': -(vw - container) / 2 + 'px',
+            'padding-left': (vw - container) / 2 + 'px',
+            'padding-right': (vw - container) / 2 + 'px',
+        })
+    }
+
+    paddingsAndMarginsForMobileXScroll()
+
+    $(window).resize(() => {
+        paddingsAndMarginsForMobileXScroll()
+    })
 })
