@@ -1,12 +1,16 @@
 * {
-    font-family: $ffM;
-    line-height: 130%;
-    font-weight: 300;
     box-sizing: border-box;
+}
+
+#page {
+    overflow: hidden;
 }
 
 body {
     background: $black;
+    font-family: $ffM;
+    line-height: 21px;
+    font-weight: 300;
 }
 
 a {
