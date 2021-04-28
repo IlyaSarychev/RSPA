@@ -98,6 +98,10 @@ ul {
             color: $black;
         }
     }
+
+    &--mobile {
+        display: none;
+    }
 }
 
 h1 {
@@ -285,6 +289,40 @@ h3.title {
         &:not(.slick-active) {
             opacity: 0;
             transform: scale(.7);
+        }
+    }
+}
+
+.slick {
+    &-dots {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        gap: 10px;
+
+        li.slick-active {
+            button {
+                opacity: 1;
+            }
+        }
+
+        button {
+            text-indent: -99999px;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            padding: 0;
+            border: none;
+            opacity: .4;
+        }
+
+        &.blue-dots {
+
+            button {
+                background-color: $blue;
+                opacity: .3;
+            }
         }
     }
 }

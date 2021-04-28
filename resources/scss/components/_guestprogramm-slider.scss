@@ -39,18 +39,3 @@
         font-weight: 300;
     }
 }
-
-@media screen and (max-width: $xxl - 1px) { 
-    .guestprog-slide {
-        &__img {
-            max-width: 540px;
-            & > img {
-                height: 420px;
-            }
-        }
-
-        &__content {
-            margin-top: -220px;
-        }
-    }
-}

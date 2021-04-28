@@ -10,7 +10,17 @@ $(document).ready(function() {
 
     let workprogSlider = $('.workprog-slider').slick({
         autoplay: false,
-        arrows: false
+        arrows: false,
+        responsive: [
+            {
+                breakpoint: 991,
+                settings: {
+                    dots: true,
+                    dotsClass: 'slick-dots custom-list',
+                    adaptiveHeight: true
+                }
+            }
+        ]
     })
 
     $('.workprog-slider-arrows .arrow--prev').click(() => {
@@ -23,7 +33,17 @@ $(document).ready(function() {
 
     let guestprogSlider = $('.guestprog-slider').slick({
         autoplay: false,
-        arrows: false
+        arrows: false,
+        responsive: [
+            {
+                breakpoint: 991,
+                settings: {
+                    dots: true,
+                    dotsClass: 'slick-dots blue-dots custom-list',
+                    adaptiveHeight: true
+                }
+            }
+        ]
     })
 
     function changeSliderButtonsClasses(buttons, activeIdx) {

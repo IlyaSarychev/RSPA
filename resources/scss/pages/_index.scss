@@ -500,6 +500,10 @@
         width: 420px;
         justify-self: center;
         margin-top: 70px;
+
+        &--mobile {
+            display: none;
+        }
     }
 
     &__title {
@@ -588,3 +592,4 @@
 
 @import '../media/media-xxl';
 @import '../media/media-xl';
+@import '../media/media-lg';
