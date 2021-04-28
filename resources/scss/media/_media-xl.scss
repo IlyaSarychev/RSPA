@@ -1,0 +1,18 @@
+@media screen and (max-width: $xl - 1px) {
+    
+    .section-offer {
+        .wrapper {
+            grid-template-columns: 310px 1fr;
+        }
+    }
+
+    .nom {
+        &-row {
+            grid-template-columns: 1fr 270px 270px;
+
+            &--first {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+}

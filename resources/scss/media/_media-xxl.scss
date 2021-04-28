@@ -1,0 +1,22 @@
+@media screen and (max-width: $xxl - 1px) { 
+    
+    .nom {
+        &-row {
+            grid-template-columns: 1fr 310px 310px;
+
+            &--first {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+
+    .section-nomination {
+        .info-wrapper {
+            grid-template-columns: 480px 420px 1fr;
+        }
+    }
+
+    .expert {
+        height: auto;
+    }
+}

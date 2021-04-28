@@ -48,3 +48,15 @@
         background: rgba(196, 196, 196, .1);
     }
 }
+
+@media screen and (max-width: $xl - 1px) { 
+    .header {
+        &__list {
+            li {
+                &:not(:last-child) {
+                    margin-right: 45px;
+                }
+            }
+        }
+    }
+}

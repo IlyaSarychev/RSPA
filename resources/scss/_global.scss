@@ -23,6 +23,50 @@ p {
     margin: 0;
 }
 
+ul {
+    &:not(.custom-list) {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+            display: flex;
+            align-items: center;
+            color: $white;
+
+            &:before {
+                content: '';
+                display: inline-block;
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                background: $turquoise;
+                margin-right: 8px;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 8px;
+            }
+        }
+    }
+
+    &.pink-marker {
+        li {
+            &::before {
+                background: $pink;
+            }
+        }
+    }
+
+    &.grey-marker {
+        li {
+            &::before {
+                background: $cold-blue;
+            }
+        }
+    }
+}
+
 .button {
     display: flex;
     align-items: center;

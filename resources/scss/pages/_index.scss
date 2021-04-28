@@ -9,7 +9,7 @@
     .wrapper {
         margin-top: 260px;
         display: grid;
-        grid-template-columns: 310px 860px 1fr;
+        grid-template-columns: 310px 1fr;
         grid-column-gap: 20px;
         position: relative;
     }
@@ -80,11 +80,28 @@
 
         &__icon {
             display: block;
-            max-height: 26px;
+            height: 26px;
+            width: 100%;
             margin-left: 10px;
             margin-bottom: 20px;
             z-index: 5;
             position: relative;
+
+            &--1 {
+                background: url('../img/offer-egg-1.svg') no-repeat;
+            }
+
+            &--2 {
+                background: url('../img/offer-egg-2.svg') no-repeat;
+            }
+
+            &--3 {
+                background: url('../img/offer-egg-3.svg') no-repeat;
+            }
+
+            &--4 {
+                background: url('../img/offer-egg-4.svg') no-repeat;
+            }
         }
 
         &__text {
@@ -113,6 +130,7 @@
 
     &-video {
         width: 100%;
+        max-width: 860px;
         height: 485px;
         border-radius: 40px;
         overflow: hidden;
@@ -191,6 +209,9 @@
         margin-right: 20px;
         display: block;
         width: 37px;
+        height: 44px;
+        background: url('../img/download-offer.png') no-repeat;
+        background-size: cover;
     }
 
     &:hover {
@@ -227,16 +248,31 @@
 .nom-row {
     display: grid;
     width: 100%;
-    grid-template-columns: 530px 310px 310px 1fr;
+    grid-template-columns: 530px 1fr;
     grid-column-gap: 20px;
 
     &__title {
         position: relative;
     }
 
+    &__list {
+        padding-right: 120px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 30px;
+        height: fit-content;
+        grid-row-gap: 8px;
+        margin: 0;
+        padding-left: 0;
+    }
+
     &__num {
         position: absolute;
-        top: -15px;
+        color: rgba(255,255,255,.1);
+        font-weight: 800;
+        line-height: 85px;
+        font-size: 122px;
+        top: -20px;
         left: 0;
     }
 
@@ -246,7 +282,17 @@
     }
 
     &:not(:first-child) {
-        padding-top: 45px;
+        padding-top: 40px;
+    }
+
+    &:first-child {
+        .nom {
+            &-row {
+                &__num {
+                    color: rgba(255,255,255,.25);
+                }
+            }
+        }
     }
 
     &__nom {
@@ -262,30 +308,6 @@
             border-radius: 50%;
             background: $turquoise;
             margin-right: 8px;
-        }
-
-        &:not(:last-child) {
-            margin-bottom: 8px;
-        }
-    }
-
-    &:nth-child(3) {
-        .nom-row {
-            &__nom {
-                &::before {
-                    background: $pink;
-                }
-            }
-        }
-    }
-
-    &:nth-child(4) {
-        .nom-row {
-            &__nom {
-                &::before {
-                    background: $cold-blue;
-                }
-            }
         }
     }
 
@@ -327,6 +349,11 @@
         line-height: 130%;
         text-transform: uppercase;
     }
+
+    &__list {
+        margin: 0;
+        padding: 0;
+    }
 }
 
 .important {
@@ -364,7 +391,7 @@
 }
 
 .section-workprogramm {
-    background: $sky;
+    background: $sky url('../img/work-programm-bg.svg');
     position: relative;
     overflow: hidden;
     padding: 100px 0;
@@ -414,7 +441,7 @@
 @import '../components/workprogramm-slider';
 
 .section-guestprogramm {
-    background: $white;
+    background: $white url('../img/guest-bg-gradient.svg') no-repeat;
     padding: 120px 0;
     position: relative;
     overflow: hidden;
@@ -503,26 +530,24 @@
         border-radius: 50%;
         margin-bottom: 15px;
         position: relative;
+        background-blend-mode: multiply;
 
         & > img {
             object-fit: cover;
-            width: 103%;
-            height: 103%;
-            margin-left: -2px;
-            margin-top: -2px;
         }
 
-        &::after {
-            content: '';
-            display: block;
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            background: $turquoise;
-            mix-blend-mode: multiply;
-        }
+        // &::after {
+        //     content: '';
+        //     display: block;
+        //     width: 100%;
+        //     height: 100%;
+        //     position: absolute;
+        //     top: 0;
+        //     left: 0;
+        //     background: $turquoise;
+        //     // opacity: .1;
+        //     mix-blend-mode: multiply;
+        // }
     }
 
     &__name {
@@ -573,3 +598,6 @@
         }
     }
 }
+
+@import '../media/media-xxl';
+@import '../media/media-xl';
