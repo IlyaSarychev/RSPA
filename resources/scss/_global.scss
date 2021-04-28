@@ -49,8 +49,9 @@ p {
         border: 1px solid $black;
 
         &:hover {
-            background: $black;
-            color: $white;
+            border: 1px solid $white;
+            background: $white;
+            color: $black;
         }
     }
 }
@@ -150,9 +151,10 @@ h3.title {
     transition: .3s;
 
     &:hover {
-        background: $black;
+        background: $white;
+        border: 1px solid $white;
         path {
-            stroke: $white;
+            stroke: $black;
         }
     }
 }
@@ -196,6 +198,27 @@ h3.title {
                 border-bottom: 1px solid rgba(0,0,0,.7);
                 right: 0;
             }
+
+            &::before {
+                content: '';
+                display: block;
+                width: 100vw;
+                background: #BACFE9;
+                opacity: 0;
+                border-radius: 60px;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                transition: .3;
+                z-index: -1;
+            }
+
+            &:hover {
+                &::before {
+                    opacity: .35;
+                }
+            }
         }
 
         &.active {
@@ -208,9 +231,6 @@ h3.title {
             }
         }
 
-        &:hover {
-            opacity: 1;
-        }
     }
 }
 
