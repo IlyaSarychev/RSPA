@@ -15,11 +15,7 @@
     }
 
     &-nav {
-        display: grid;
         width: 100%;
-        grid-template-columns: repeat(2, 1fr);
-        grid-row-gap: 20px;
-        height: fit-content;
         padding-top: 12px;
         margin-bottom: 50px;
 
@@ -32,6 +28,15 @@
             &:hover {
                 opacity: .7;
             }
+        }
+
+        &__list {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-row-gap: 20px;
         }
     }
 

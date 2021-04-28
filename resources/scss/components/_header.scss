@@ -18,11 +18,21 @@
         color: $white;
         font-weight: 300;
         transition: .3s;
-        &:not(:last-child) {
-            margin-right: 65px;
-        }
         &:hover {
             opacity: .7;
+        }
+    }
+
+    &__list {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            &:not(:last-child) {
+                margin-right: 65px;
+            }
         }
     }
 
