@@ -75,12 +75,21 @@ $(document).ready(function() {
         let container = $('.container').width()
         let vw = $(window).width()
 
-        $('.experts').css({
-            'margin-left': -(vw - container) / 2 + 'px',
-            'margin-right': -(vw - container) / 2 + 'px',
-            'padding-left': (vw - container) / 2 + 'px',
-            'padding-right': (vw - container) / 2 + 'px',
-        })
+        if (vw < 992) {
+            $('.experts').css({
+                'margin-left': -(vw - container) / 2 + 'px',
+                'margin-right': -(vw - container) / 2 + 'px',
+                'padding-left': (vw - container) / 2 + 'px',
+                'padding-right': (vw - container) / 2 + 'px',
+            })
+        } else {
+            $('.experts').css({
+                'margin-left': 0,
+                'margin-right': 0,
+                'padding-left': 0,
+                'padding-right': 0,
+            })
+        }
     }
 
     paddingsAndMarginsForMobileXScroll()
