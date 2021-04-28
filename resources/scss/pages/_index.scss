@@ -538,3 +538,38 @@
         opacity: .8;
     }
 }
+
+.partners {
+    margin-top: 100px;
+
+    &__title {
+        max-width: 500px;
+    }
+
+    &__wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 50px;
+    }
+
+    &__button {
+        margin-top: 20px;
+    }
+
+    &-list {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 59px;
+        row-gap: 50px;
+
+        &__partner {
+            display: block;
+            // &:not(:last-child) {
+            //     margin-right: 60px;
+            // }
+        }
+    }
+}
