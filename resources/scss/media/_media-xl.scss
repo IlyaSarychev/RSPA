@@ -8,11 +8,52 @@
 
     .nom {
         &-row {
-            grid-template-columns: 1fr 270px 270px;
+            grid-template-columns: 1fr 540px;
+
+            &__list {
+                grid-column-gap: 15px;
+            }
 
             &--first {
                 grid-template-columns: repeat(2, 1fr);
             }
+        }
+    }
+
+    .section-nomination {
+        .info-wrapper {
+            grid-template-columns: repeat(2, 1fr);
+
+            &__button {
+                justify-self: start;
+                margin-top: 40px;
+            }
+        }
+    }
+
+    .section-workprogramm {
+        .wrapper {
+            display: block;
+        }
+    }
+
+    .workprog-offer {
+        &__text {
+            max-width: 610px;
+        }
+    }
+
+    .section-guestprogramm {
+        .wrapper {
+            grid-template-columns: 1fr 60px;
+        }
+    }
+
+    .experts {
+        grid-template-columns: repeat(3, 1fr);
+
+        &__wrapper {
+            grid-column: 2 / 4;
         }
     }
 }

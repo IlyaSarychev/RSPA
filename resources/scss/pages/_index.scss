@@ -535,19 +535,6 @@
         & > img {
             object-fit: cover;
         }
-
-        // &::after {
-        //     content: '';
-        //     display: block;
-        //     width: 100%;
-        //     height: 100%;
-        //     position: absolute;
-        //     top: 0;
-        //     left: 0;
-        //     background: $turquoise;
-        //     // opacity: .1;
-        //     mix-blend-mode: multiply;
-        // }
     }
 
     &__name {

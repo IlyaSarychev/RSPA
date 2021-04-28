@@ -112,3 +112,11 @@
         }
     }
 }
+
+@media screen and (max-width: $xl - 1px) {
+    .footer {
+        .wrapper {
+            grid-template-columns: 250px 410px 1fr;
+        }
+    }
+}

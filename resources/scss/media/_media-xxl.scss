@@ -2,7 +2,11 @@
     
     .nom {
         &-row {
-            grid-template-columns: 1fr 310px 310px;
+            grid-template-columns: 1fr 620px;
+
+            &__list {
+                padding-right: 0;
+            }
 
             &--first {
                 grid-template-columns: repeat(2, 1fr);
