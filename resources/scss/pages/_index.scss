@@ -249,6 +249,10 @@
 .noms {
     width: 100%;
     margin-bottom: 75px;
+
+    &-gradient {
+        display: none;
+    }
 }
 
 .nom-row {

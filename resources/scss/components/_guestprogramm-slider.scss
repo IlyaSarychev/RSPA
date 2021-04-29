@@ -13,10 +13,26 @@
         }
     }
 
+    &__num {
+        display: none;
+        font-family: $ffGiga;
+        font-weight: 700;
+        color: $white;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -35px;
+        text-align: center;
+        font-size: 118px;
+        line-height: 188px;
+        z-index: -1;
+    }
+
     &__content {
         width: 640px;
         margin-top: -270px;
         padding: 50px 20px;
+        position: relative;
     }
 
     &__title {

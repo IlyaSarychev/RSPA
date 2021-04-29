@@ -122,6 +122,8 @@
     }
 
     .noms {
+        margin-bottom: 30px;
+
         &-gradient {
             position: absolute;
             width: 840px;
@@ -129,13 +131,14 @@
             right: 0;
             top: 270px;
             z-index: -1;
+            display: block;
 
             &--2 {
                 top: 530px;
             }
 
             &--3 {
-                top: 830px;
+                top: 890px;
                 left: -360px;
             }
         }
@@ -222,6 +225,195 @@
                     margin-bottom: 8px;
                 }
             }
+        }
+
+        &-date {
+            &__text {
+                font-size: 15px;
+                line-height: 19px;
+            }
+
+            &__date {
+                font-size: 15px;
+                line-height: 24px;
+            }
+        }
+    }
+
+    .important {
+        &__text {
+            font-size: 12px;
+            line-height: 16px;
+            width: 270px;
+            margin: 0 auto;
+        }
+    }
+
+    .download-offer {
+        width: 100%;
+        height: 80px;
+
+        &__img {
+            width: 32px;
+            background-size: contain;
+            margin-right: 10px;
+        }
+
+        &__text {
+            font-size: 15px;
+            line-height: 19px;
+            margin-bottom: 4px;
+        }
+
+        &__desc {
+            font-size: 12px;
+            line-height: 16px;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+    }
+
+    .section-workprogramm {
+        padding: 75px 0;
+        background-position: center top 0px;
+        background-size: 240%;
+        background-repeat: no-repeat;
+
+        .title {
+            margin-bottom: 20px;
+        }
+    }
+
+    .workprog {
+        &-offer {
+            margin-bottom: 25px;
+
+            &__text {
+                margin: 0;
+            }
+        }
+
+        &-slide {
+            &__title {
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;  
+                overflow: hidden;
+                font-size: 15px;
+                line-height: 24px;
+                margin-bottom: 10px;
+            }
+
+            &__text {
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;  
+                overflow: hidden;
+                font-size: 15px;
+                line-height: 19px;
+            }
+
+            &__speaker {
+                font-size: 15px;
+                line-height: 19px;
+            }
+        }
+    }
+
+    .slick {
+        &-dots {
+            li {
+                height: 8px;
+            }
+
+            button {
+                width: 8px;
+                height: 8px;
+            }
+        }
+    }
+
+    .section-guestprogramm {
+        padding: 75px 0 35px;
+        background-size: 200%;
+        background-position-y: bottom;
+
+        .title {
+            margin-bottom: 20px;
+        }
+    }
+
+    .guestprog {
+        &-slide {
+            &__img {
+                & > img {
+                    height: 180px;
+                }
+            }
+
+            &__content {
+                padding: 50px 20px 20px;
+                box-shadow: inset 1px 2px rgba(255,255,255,.5), inset -.5px -.5px rgba(255,255,255,.5);
+            }
+
+            &__num {
+                display: block;
+            }
+
+            &__title {
+                font-size: 15px;
+                line-height: 24px;
+                text-decoration: none;
+                margin-bottom: 10px;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;  
+                overflow: hidden;
+            }
+
+            &__text {
+                font-size: 15px;
+                line-height: 19px;
+                display: -webkit-box;
+                -webkit-line-clamp: 9;
+                -webkit-box-orient: vertical;  
+                overflow: hidden;
+            }
+        }
+    }
+
+    .section-experts {
+        padding: 85px 0 75px;
+    }
+
+    .experts {
+        grid-gap: 15px;
+
+        &__wrapper {
+            margin-top: 0;
+            margin-bottom: 20px;
+            width: initial;
+        }
+
+        &__title {
+            margin-bottom: 20px;
+        }
+
+        &__text {
+            font-size: 15px;
+            line-height: 19px;
+        }
+    }
+
+    .expert {
+        border-radius: 15px;
+    }
+
+    .partners {
+        margin-top: 75px;
+
+        &__wrapper {
+            margin-bottom: 40px;
         }
     }
 }
