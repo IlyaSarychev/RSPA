@@ -161,4 +161,12 @@ $(document).ready(function() {
             ]
         })
     }
+
+    $('.burger').click(() => {
+        $('.mobile-menu').addClass('show')
+    })
+
+    $('.mobile-menu__button').click(() => {
+        $('.mobile-menu').removeClass('show')
+    })
 })
