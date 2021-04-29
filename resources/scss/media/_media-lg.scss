@@ -196,6 +196,14 @@
         }
     }
 
+    .section-experts {
+        .button {
+            &--mobile {
+                margin: 70px auto 0;
+            }
+        }
+    }
+
     .experts__wrapper {
         display: none;
 
@@ -217,5 +225,35 @@
 
     .expert {
         min-width: 270px;
+    }
+
+    .partners {
+        &__button {
+            display: none;
+        }
+
+        &-list {
+            flex-wrap: nowrap;
+            // overflow-x: scroll;
+
+            &:nth-child(2) {
+                margin-bottom: 30px;
+            }
+
+            &__partner {
+                margin-right: 35px;
+            }
+
+            .slick {
+                &-list {
+                    overflow: visible;
+                }
+
+                &-track {
+                    display: flex;
+                    align-items: center;
+                }
+            }
+        }
     }
 }

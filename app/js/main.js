@@ -96,5 +96,69 @@ $(document).ready(function() {
 
     $(window).resize(() => {
         paddingsAndMarginsForMobileXScroll()
+
+        // if ($(window).width() < 992) {
+
+        // }
     })
+
+    // let partnersSlider = $('.partners-list').slick({
+    //     mobileFirst: true,
+    //     rows: 2,
+    //     variableWidth: true,
+    //     cssEase: 'linear',
+    //     autoplay: true,
+    //     autoplaySpeed: 0,
+    //     responsive: [
+    //         {
+    //             breakpoint: 992,
+    //             settings: 'unslick'
+    //         }
+    //     ]
+    // })
+
+    if ($(window).width() < 992) {
+
+        let firstRow = $('.partners-list')
+        let secondRow = firstRow.clone()
+        secondRow.empty()
+        firstRow.find('.partners-list__partner').each((i, el) => {
+            if (Math.floor(firstRow.find('.partners-list__partner').length / 2) < i + 1) {
+                $(secondRow).append(el)
+            }
+        })
+        $('.partners-list').after(secondRow)
+
+        firstRow.slick({
+            mobileFirst: true,
+            cssEase: 'linear',
+            autoplay: true,
+            autoplaySpeed: 0,
+            speed: 2000,
+            variableWidth: true,
+            arrows: false,
+            responsive: [
+                {
+                    breakpoint: 992,
+                    settings: 'unslick'
+                }
+            ]
+        })
+
+        secondRow.slick({
+            mobileFirst: true,
+            cssEase: 'linear',
+            autoplay: true,
+            autoplaySpeed: 0,
+            speed: 2000,
+            variableWidth: true,
+            arrows: false,
+            responsive: [
+                {
+                    breakpoint: 992,
+                    settings: 'unslick'
+                }
+            ]
+        })
+    }
 })
