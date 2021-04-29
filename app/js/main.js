@@ -1,14 +1,14 @@
-$(document).ready(function() {
+jQuery(document).ready(function() {
 
-    $(window).scroll(function() {
-        if ($(window).scrollTop() > 100) {
-            $('.header').addClass('header--scroll')
+    jQuery(window).scroll(function() {
+        if (jQuery(window).scrollTop() > 100) {
+            jQuery('.header').addClass('header--scroll')
         } else {
-            $('.header').removeClass('header--scroll')
+            jQuery('.header').removeClass('header--scroll')
         }
     })
 
-    let workprogSlider = $('.workprog-slider').slick({
+    let workprogSlider = jQuery('.workprog-slider').slick({
         autoplay: false,
         arrows: false,
         responsive: [
@@ -23,15 +23,15 @@ $(document).ready(function() {
         ]
     })
 
-    $('.workprog-slider-arrows .arrow--prev').click(() => {
+    jQuery('.workprog-slider-arrows .arrow--prev').click(() => {
         workprogSlider.slick('slickPrev')
     })
 
-    $('.workprog-slider-arrows .arrow--next').click(() => {
+    jQuery('.workprog-slider-arrows .arrow--next').click(() => {
         workprogSlider.slick('slickNext')
     })
 
-    let guestprogSlider = $('.guestprog-slider').slick({
+    let guestprogSlider = jQuery('.guestprog-slider').slick({
         autoplay: false,
         arrows: false,
         responsive: [
@@ -49,16 +49,16 @@ $(document).ready(function() {
     function changeSliderButtonsClasses(buttons, activeIdx) {
         buttons.each((i, el) => {
             if (i === activeIdx) {
-                $(el).addClass('active')
+                jQuery(el).addClass('active')
             } else {
-                $(el).removeClass('active')
+                jQuery(el).removeClass('active')
             }
         })
     }
 
     function bindButtonsToSlider(buttons, slider) {
         buttons.each((i, el) => {
-            $(el).click(() => {
+            jQuery(el).click(() => {
                 slider.slick('slickGoTo', i)
                 changeSliderButtonsClasses(buttons, i)
             })
@@ -69,21 +69,37 @@ $(document).ready(function() {
         })
     }
 
-    bindButtonsToSlider($('.section-guestprogramm .slider-buttons__btn'), guestprogSlider)
+    bindButtonsToSlider(jQuery('.section-guestprogramm .slider-buttons__btn'), guestprogSlider)
 
     function paddingsAndMarginsForMobileXScroll() {
-        let container = $('.container').width()
-        let vw = $(window).width()
+        let container = jQuery('.container').width()
+        let vw = jQuery(window).width()
 
         if (vw < 992) {
-            $('.experts').css({
+            jQuery('.experts').css({
                 'margin-left': -(vw - container) / 2 + 'px',
                 'margin-right': -(vw - container) / 2 + 'px',
                 'padding-left': (vw - container) / 2 + 'px',
                 'padding-right': (vw - container) / 2 + 'px',
             })
         } else {
-            $('.experts').css({
+            jQuery('.experts').css({
+                'margin-left': 0,
+                'margin-right': 0,
+                'padding-left': 0,
+                'padding-right': 0,
+            })
+        }
+
+        if (vw < 576) {
+            jQuery('.b-nom-wrapper').css({
+                'margin-left': -(vw - container) / 2 + 'px',
+                'margin-right': -(vw - container) / 2 + 'px',
+                'padding-left': (vw - container) / 2 + 'px',
+                'padding-right': (vw - container) / 2 + 'px',
+            })
+        } else {
+            jQuery('.b-nom-wrapper').css({
                 'margin-left': 0,
                 'margin-right': 0,
                 'padding-left': 0,
@@ -94,40 +110,21 @@ $(document).ready(function() {
 
     paddingsAndMarginsForMobileXScroll()
 
-    $(window).resize(() => {
+    jQuery(window).resize(() => {
         paddingsAndMarginsForMobileXScroll()
-
-        // if ($(window).width() < 992) {
-
-        // }
     })
 
-    // let partnersSlider = $('.partners-list').slick({
-    //     mobileFirst: true,
-    //     rows: 2,
-    //     variableWidth: true,
-    //     cssEase: 'linear',
-    //     autoplay: true,
-    //     autoplaySpeed: 0,
-    //     responsive: [
-    //         {
-    //             breakpoint: 992,
-    //             settings: 'unslick'
-    //         }
-    //     ]
-    // })
+    if (jQuery(window).width() < 992) {
 
-    if ($(window).width() < 992) {
-
-        let firstRow = $('.partners-list')
+        let firstRow = jQuery('.partners-list')
         let secondRow = firstRow.clone()
         secondRow.empty()
         firstRow.find('.partners-list__partner').each((i, el) => {
             if (Math.floor(firstRow.find('.partners-list__partner').length / 2) < i + 1) {
-                $(secondRow).append(el)
+                jQuery(secondRow).append(el)
             }
         })
-        $('.partners-list').after(secondRow)
+        jQuery('.partners-list').after(secondRow)
 
         firstRow.slick({
             mobileFirst: true,
@@ -162,11 +159,11 @@ $(document).ready(function() {
         })
     }
 
-    $('.burger').click(() => {
-        $('.mobile-menu').addClass('show')
+    jQuery('.burger').click(() => {
+        jQuery('.mobile-menu').addClass('show')
     })
 
-    $('.mobile-menu__button').click(() => {
-        $('.mobile-menu').removeClass('show')
+    jQuery('.mobile-menu__button').click(() => {
+        jQuery('.mobile-menu').removeClass('show')
     })
 })

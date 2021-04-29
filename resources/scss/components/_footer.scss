@@ -127,11 +127,16 @@
             grid-template-columns: 1fr;
         }
 
+        .footer {
+            &-contacts {
+                border-bottom: 1px solid rgba(186, 207, 233,.2);
+            }
+        }
+
         &-contacts {
             justify-self: start;
             grid-row: 2 / 3;
             padding: 25px 0;
-            border-bottom: 1px solid rgba(186, 207, 233,.2);
             width: 100%;
 
             &__link {
