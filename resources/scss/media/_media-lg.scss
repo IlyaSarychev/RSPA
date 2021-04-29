@@ -43,7 +43,7 @@
         }
     }
 
-    .section-offer {
+    .section-about {
         .wrapper {
             display: flex;
             flex-direction: column;
@@ -97,7 +97,7 @@
 
     .section-workprogramm {
         .button {
-            &--mobile {
+            &--md {
                 margin: 50px auto 0;
             }
         }
@@ -171,7 +171,7 @@
     }
 
     .button {
-        &--mobile {
+        &--md {
             display: flex;
         }
     }
@@ -198,7 +198,7 @@
 
     .section-experts {
         .button {
-            &--mobile {
+            &--md {
                 margin: 70px auto 0;
             }
         }

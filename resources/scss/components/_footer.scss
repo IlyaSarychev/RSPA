@@ -120,3 +120,42 @@
         }
     }
 }
+
+@media screen and (max-width: $md - 1px) {
+    .footer {
+        .wrapper {
+            grid-template-columns: 1fr;
+        }
+
+        &-contacts {
+            justify-self: start;
+            grid-row: 2 / 3;
+            padding: 25px 0;
+            border-bottom: 1px solid rgba(186, 207, 233,.2);
+            width: 100%;
+
+            &__link {
+                text-align: left;
+            }
+        }
+
+        &-nav {
+            padding: 20px 0 25px;
+            border-bottom: 1px solid rgba(186, 207, 233,.2);
+            margin-bottom: 25px;
+        }
+    }
+
+    .policy {
+        grid-column: 1 / 2;
+
+        &__policy {
+            margin-bottom: 15px;
+        }
+    }
+
+    .iskra {
+        justify-self: start;
+        margin-top: 20px;
+    }
+}

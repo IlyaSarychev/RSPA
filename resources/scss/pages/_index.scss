@@ -1,24 +1,10 @@
 .section-offer {
     padding-top: 215px;
-    padding-bottom: 100px;
+    padding-bottom: 260px;
     position: relative;
-    overflow: hidden;
-    background: url('../img/bg-gradient.svg');
-    background-size: cover;
-
-    .wrapper {
-        margin-top: 260px;
-        display: grid;
-        grid-template-columns: 310px 1fr;
-        grid-column-gap: 20px;
-        position: relative;
-    }
-
-    .title {
-        position: absolute;
-        top: -33px;
-        right: 0;
-    }
+    overflow: visible;
+    // background: url('../img/bg-gradient.svg');
+    // background-size: cover;
 
     .bg-gradient {
         top: 0;
@@ -56,6 +42,26 @@
 //         transform: rotate(360deg);
 //     }
 // }
+
+.section-about {
+    padding-bottom: 100px;
+
+    .wrapper {
+        // margin-top: 260px;
+        display: grid;
+        grid-template-columns: 310px 1fr;
+        grid-column-gap: 20px;
+        position: relative;
+    }
+
+    .title {
+        position: absolute;
+        top: -33px;
+        right: 0;
+    }
+
+    
+}
 
 .offer {
     &__title {
@@ -312,7 +318,8 @@
     }
 
     &--first {
-        grid-template-columns: repeat(2, 1fr);
+        // grid-template-columns: repeat(2, 1fr);
+        display: block;
 
         .nom-row {
             &__title {
@@ -329,10 +336,11 @@
     position: relative;
     overflow: hidden;
     border-radius: 40px;
-    background: url(../img/nom-block.svg);
-    background-size: cover;
     padding: 35px 30px;
     box-sizing: border-box;
+    background: linear-gradient(0deg, rgba(173, 250, 255, 0.2), rgba(173, 250, 255, 0.2)), radial-gradient(246.54% 162.06% at 2.55% 91.83%, rgba(1, 0, 239, 0.28) 0%, rgba(1, 0, 239, 0) 100%);
+    backdrop-filter: blur(42px);
+    box-shadow: inset 1px 1px rgba(173, 250, 255, .3);
 
     &__img {
         position: absolute;
@@ -353,6 +361,12 @@
     &__list {
         margin: 0;
         padding: 0;
+    }
+
+    &-wrapper {
+        width: 100%;
+        display: flex;
+        gap: 20px;
     }
 }
 
@@ -593,3 +607,4 @@
 @import '../media/media-xxl';
 @import '../media/media-xl';
 @import '../media/media-lg';
+@import '../media/media-md';
