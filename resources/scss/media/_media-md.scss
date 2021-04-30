@@ -1,8 +1,4 @@
 @media screen and (max-width: $md - 1px) {
-
-    .title {
-        font-size: 36px;
-    }
     
     .section-offer {
         height: 100vh;
@@ -69,6 +65,7 @@
 
             &__text {
                 text-align: center;
+                margin: 0 auto;
             }
 
             &::before {
@@ -119,6 +116,11 @@
         }
     }
 
+    .section-guestprogramm {
+        padding: 75px 0;
+        background-position-y: bottom;
+    }
+
     .guestprog {
         &-slide {
             &__img {
@@ -131,6 +133,18 @@
 
             &__content {
                 padding: 20px;
+            }
+        }
+    }
+
+    .section-experts {
+        padding: 75px 0;
+    }
+
+    .experts {
+        &__wrapper {
+            &--mobile {
+                margin-top: 0;
             }
         }
     }
