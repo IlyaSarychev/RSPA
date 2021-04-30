@@ -164,3 +164,69 @@
         margin-top: 20px;
     }
 }
+
+@media screen and (max-width: $sm - 1px) { 
+    .footer {
+        padding: 40px 0 50px;
+
+        .logo {
+            height: 110px;
+
+            & > img {
+                width: 150px;
+            }
+        }
+
+        &-contacts {
+            &__link {
+                font-size: 15px;
+                line-height: 24px;
+
+                &:not(:last-child) {
+                    margin-bottom: 10px;
+                }
+            }   
+        }
+
+        &-nav {
+            &__list {
+                display: block;
+
+                li {
+                    &:not(:last-child) {
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+
+            &__link {
+                font-size: 15px;
+                line-height: 19px;
+            }
+        }
+    }
+
+    .policy {
+        &__policy {
+            font-size: 15px;
+            line-height: 19px;
+        }
+
+        &__rights {
+            font-size: 15px;
+            line-height: 19px;
+            max-width: 240px;
+        }
+    }
+
+    .iskra {
+        margin-top: 40px;
+    }
+
+    .mobile-menu {
+        &__contacts {
+            padding: 0;
+        }
+    }
+
+}

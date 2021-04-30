@@ -415,5 +415,12 @@
         &__wrapper {
             margin-bottom: 40px;
         }
+
+        &-list {
+            &__partner {
+                max-height: 38px;
+                max-width: 125px;
+            }
+        }
     }
 }
