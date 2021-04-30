@@ -166,4 +166,9 @@ jQuery(document).ready(function() {
     jQuery('.mobile-menu__button').click(() => {
         jQuery('.mobile-menu').removeClass('show')
     })
+
+    $('a[href^="#"]').click(function(e) {
+        e.preventDefault()
+        $('html, body').animate({scrollTop: $(`section#${$(this).attr('href').slice(1)}`).offset().top - $('.header').height()}, 500, 'swing')
+    })
 })
