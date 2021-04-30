@@ -612,6 +612,50 @@
     }
 }
 
+.section-form {
+    background: url('../img/form-section-bg.jpg') no-repeat;
+    background-size: cover;
+    padding: 100px 0;
+
+    .title {
+        margin-bottom: 50px;
+    }
+}
+
+.form {
+    &-part {
+        width: 100%;
+        max-width: 970px;
+        padding: 50px 30px;
+        background: linear-gradient(0deg, rgba(173, 250, 255, 0.2), rgba(173, 250, 255, 0.2)), radial-gradient(246.54% 162.06% at 2.55% 91.83%, rgba(1, 0, 239, 0.28) 0%, rgba(1, 0, 239, 0) 100%);
+        backdrop-filter: blur(42px);
+        border-radius: 40px;
+        box-shadow: inset 1px 1px rgba(173, 250, 255, .2), inset 0 -1px rgba(1, 0, 239, .3);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+
+        &__wrapper {
+            grid-column: 1 / 3;
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &-policy {
+        color: rgba(255,255,255,.5);
+        display: block;
+        line-height: 21px;
+        margin-left: 20px;
+        max-width: 290px;
+
+        a {
+            color: $white;
+            text-decoration: underline;
+        }
+    }
+}
+
 @import '../media/media-xxl';
 @import '../media/media-xl';
 @import '../media/media-lg';

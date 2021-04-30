@@ -167,8 +167,44 @@ jQuery(document).ready(function() {
         jQuery('.mobile-menu').removeClass('show')
     })
 
-    $('a[href^="#"]').click(function(e) {
+    jQuery('a[href^="#"]').click(function(e) {
         e.preventDefault()
-        $('html, body').animate({scrollTop: $(`section#${$(this).attr('href').slice(1)}`).offset().top - $('.header').height()}, 500, 'swing')
+        jQuery('html, body').animate({scrollTop: jQuery(`section#${jQuery(this).attr('href').slice(1)}`).offset().top - jQuery('.header').height()}, 500, 'swing')
+    })
+
+    jQuery('.select__header').click(function() {
+        jQuery(this).closest('.select').toggleClass('show')
+    })
+
+    $('.select__item').click(selectItemClickHandler)
+
+    function selectItemClickHandler() {
+        $('.select').removeClass('show')
+        let select = $(this).closest('.select')
+        let input = select.next('input[type="hidden"]')
+        
+        if (!select.hasClass('select--chosen')) {
+            select.addClass('select--chosen')
+            select.find('.select__header span').text($(this).text())
+            $(this).remove()
+        } else {
+            select.find('.select__body').append(`
+                <div class="select__item" data-type="${input.val()}">${select.find('.select__header span').text()}</div>
+            `)
+            select.find('.select__item:last-child').click(selectItemClickHandler)
+            select.find('.select__header span').text($(this).text())
+            $(this).remove()
+        }
+
+        input.val($(this).attr('data-type'))
+    }
+
+    $('[type="submit"]').click(e => {
+        e.preventDefault()
+    })
+
+    $('form input').change(function() {
+        let form = $(this).closest('form')
+        //
     })
 })

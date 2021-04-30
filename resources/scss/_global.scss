@@ -102,6 +102,26 @@ ul {
     &--md {
         display: none;
     }
+
+    &--blue {
+        background: $turquoise;
+        color: $black;
+
+        &:hover {
+            background: $white;
+        }
+
+        &:active {
+            background: #DCEFF5;
+        }
+
+        &:disabled {
+            opacity: .3;
+            &:hover {
+                background: $turquoise;
+            }
+        }
+    }
 }
 
 h1 {
@@ -323,6 +343,120 @@ h3.title {
             button {
                 background-color: $blue;
                 opacity: .3;
+            }
+        }
+    }
+}
+
+input {
+    &:not(.custom-input) {
+        width: 100%;
+        height: 50px;
+        background: rgba(17, 17, 17, .2);
+        border-radius: 10px;
+        border: none;
+        padding: 0 20px;
+        color: $white;
+        font-family: $ffM;
+        transition: .3s;
+
+        &:focus {
+            outline: none;
+            border: 1px solid $turquoise;
+        }
+
+        &::placeholder {
+            font-family: $ffM;
+            font-weight: 300;
+            color: #bacfe9;
+        }
+
+        &:hover {
+            background: rgba(17, 17, 17, .35);
+        }
+    }
+}
+
+.select {
+    color: $white;
+    font-family: $ffM;
+    width: 100%;
+    position: relative;
+
+    &__header {
+        width: 100%;
+        height: 50px;
+        background: rgba(17, 17, 17, .2);
+        color: #bacfe9;
+        border-radius: 10px;
+        border: none;
+        padding: 0 20px;     
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;   
+        transition: .3s;
+
+        &:hover {
+            background: rgba(17, 17, 17, .35);
+        }
+    }
+
+    &__body {
+        position: absolute;
+        top: 55px;
+        width: 100%;
+        max-height: 150px;
+        border: 1px solid $turquoise;
+        background: #2C6DCF;
+        border-radius: 10px;
+        display: none;
+        overflow-y: auto;
+    }
+
+    &__arrow {
+        transition: .3s;
+    }
+
+    &.show {
+        .select {
+            &__header {
+                border: 1px solid $turquoise;
+                background: #2C6DCF;
+                color: $white;
+
+                &:hover {
+                    background: #2964BC;
+                }
+            }
+
+            &__body {
+                display: block;
+            }
+
+            &__arrow {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    &__item {
+        height: 50px;
+        padding: 0 20px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        transition: .3s;
+        
+        &:hover {
+            background: rgba(17,17,17,.1);
+        }
+    }
+
+    &--chosen {
+        .select {
+            &__header {
+                color: $white;
             }
         }
     }
