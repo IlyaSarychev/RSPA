@@ -1,15 +1,24 @@
 .section-offer {
     padding-top: 215px;
-    padding-bottom: 260px;
+    // padding-bottom: 260px;
+    padding-bottom: 100px;
     position: relative;
-    overflow: visible;
-    // background: url('../img/bg-gradient.svg');
-    // background-size: cover;
+    overflow: hidden;
+    background: url('../img/bg-gradient.svg');
+    background-size: cover;
 
-    .bg-gradient {
-        top: 0;
-        left: 0;
-        width: 100%;
+    .wrapper {
+        margin-top: 260px;
+        display: grid;
+        grid-template-columns: 310px 1fr;
+        grid-column-gap: 20px;
+        position: relative;
+    }
+
+    .title {
+        position: absolute;
+        top: -33px;
+        right: 0;
     }
 }
 
@@ -42,26 +51,6 @@
 //         transform: rotate(360deg);
 //     }
 // }
-
-.section-about {
-    padding-bottom: 100px;
-
-    .wrapper {
-        // margin-top: 260px;
-        display: grid;
-        grid-template-columns: 310px 1fr;
-        grid-column-gap: 20px;
-        position: relative;
-    }
-
-    .title {
-        position: absolute;
-        top: -33px;
-        right: 0;
-    }
-
-    
-}
 
 .offer {
     &__title {

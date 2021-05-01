@@ -1,13 +1,19 @@
-@media screen and (max-width: $md - 1px) {
-    
+@media screen and (max-width: $md) {
+
     .section-offer {
-        height: 100vh;
-        padding: 0;
-        display: flex;
-        align-items: center;
+        padding-top: 0;
+
+        .wrapper {
+            margin-top: 0;
+        }
     }
+    
 
     .offer {
+        &-wrapper {
+            height: 100vh;
+            justify-content: center;
+        }
         &__title {
             font-size: 47px;
             margin-bottom: 30px;

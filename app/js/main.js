@@ -169,7 +169,7 @@ jQuery(document).ready(function() {
 
     jQuery('a[href^="#"]').click(function(e) {
         e.preventDefault()
-        jQuery('html, body').animate({scrollTop: jQuery(`section#${jQuery(this).attr('href').slice(1)}`).offset().top - jQuery('.header').height()}, 500, 'swing')
+        jQuery('html, body').animate({scrollTop: jQuery(`#${jQuery(this).attr('href').slice(1)}`).offset().top - jQuery('.header').height()}, 500, 'swing')
     })
 
     jQuery('.select__header').click(function() {

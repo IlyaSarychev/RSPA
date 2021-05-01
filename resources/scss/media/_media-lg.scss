@@ -28,9 +28,17 @@
     }
 
     .section-offer {
-        height: 100vh;
-        display: flex;
-        align-items: center;
+        padding-bottom: 65px;
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .title {
+            position: static;
+            margin-bottom: 20px;
+        }
     }
 
     .title {
@@ -105,20 +113,6 @@
 
         & > img {
             width: 1540px;
-        }
-    }
-
-    .section-about {
-        padding-bottom: 65px;
-
-        .wrapper {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .title {
-            position: static;
-            margin-bottom: 20px;
         }
     }
 
