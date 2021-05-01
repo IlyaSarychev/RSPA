@@ -645,6 +645,36 @@
     }
 }
 
+.social {
+    &-icons {
+        display: flex;
+    }
+
+    &-icon {
+        svg, path, rect, circle {
+            transition: .3s;
+        }
+
+        &:hover {
+            svg {
+                fill: $turquoise;
+            }
+            path {
+                fill: $black;
+            }
+            rect {
+                stroke: $turquoise
+            }
+            circle {
+                stroke: $black;
+                &:last-child {
+                    fill: $black;
+                }
+            }
+        }
+    }
+}
+
 @import '../media/media-xxl';
 @import '../media/media-xl';
 @import '../media/media-lg';

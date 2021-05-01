@@ -168,6 +168,7 @@ jQuery(document).ready(function() {
     })
 
     jQuery('a[href^="#"]').click(function(e) {
+        if ($(this).attr('href').length < 2) return
         e.preventDefault()
         jQuery('html, body').animate({scrollTop: jQuery(`#${jQuery(this).attr('href').slice(1)}`).offset().top - jQuery('.header').height()}, 500, 'swing')
     })
@@ -176,35 +177,92 @@ jQuery(document).ready(function() {
         jQuery(this).closest('.select').toggleClass('show')
     })
 
-    $('.select__item').click(selectItemClickHandler)
+    jQuery('.select__item').click(selectItemClickHandler)
 
     function selectItemClickHandler() {
-        $('.select').removeClass('show')
-        let select = $(this).closest('.select')
+        jQuery('.select').removeClass('show')
+        let select = jQuery(this).closest('.select')
         let input = select.next('input[type="hidden"]')
         
         if (!select.hasClass('select--chosen')) {
             select.addClass('select--chosen')
-            select.find('.select__header span').text($(this).text())
-            $(this).remove()
+            select.find('.select__header span').text(jQuery(this).text())
+            input.addClass('valid')
+            jQuery(this).remove()
         } else {
             select.find('.select__body').append(`
                 <div class="select__item" data-type="${input.val()}">${select.find('.select__header span').text()}</div>
             `)
             select.find('.select__item:last-child').click(selectItemClickHandler)
-            select.find('.select__header span').text($(this).text())
-            $(this).remove()
+            select.find('.select__header span').text(jQuery(this).text())
+            jQuery(this).remove()
         }
 
-        input.val($(this).attr('data-type'))
+        input.val(jQuery(this).attr('data-type'))
+        input.trigger('change')
     }
 
-    $('[type="submit"]').click(e => {
+    jQuery('[type="submit"]').click(e => {
         e.preventDefault()
     })
 
-    $('form input').change(function() {
-        let form = $(this).closest('form')
-        //
+    jQuery('form input').change(function() {
+        let form = jQuery(this).closest('form')
+        
+        form.find('input').each((i, el) => {
+            
+            if (jQuery(el).val().length) {
+                jQuery(el).addClass('valid')
+            }
+
+            if ($(el).attr('type') === 'file') {
+                if (el.files.length) {
+                    $(el).addClass('valid')
+                    $(el).closest('.input-file').addClass('contains')
+                    $(el).next('label').find('.input-file__text').text(el.files[0].name)
+                }
+            }
+        })
+
+        if (form.find('input:not(.valid)').length) {
+            form.find('button[type="submit"]').attr('disabled', true)
+        } else {
+            form.find('button[type="submit"]').attr('disabled', false)
+        }
+    })
+
+
+    jQuery('.modal').on('click', function (e) {
+        if (e.target.classList.contains('modal')) {
+            jQuery('.modal.show').removeClass('show');
+            jQuery('body,html').removeClass('modal-active');
+        }
+    
+    });
+    
+    // modal
+    function openModal(id) {
+        jQuery('.modal#' + id).addClass('show');
+        jQuery('body,html').addClass('modal-active');
+    }
+    
+    function closeModal() {
+        jQuery('.modal.show').removeClass('show');
+        jQuery('body,html').removeClass('modal-active');
+    }
+
+    $(document).click(e => {
+        if (!$(e.target).hasClass('select') && !$(e.target).closest('.select').length) {
+            $('.select').removeClass('show')
+        }
+    })
+
+    $('.info-wrapper .button').click(e => {
+        openModal('member-modal')
+    })
+
+    $('.modal-back').click(function(e) {
+        e.preventDefault()
+        closeModal($(this).closest('.modal').attr('id'))
     })
 })

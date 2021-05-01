@@ -36,7 +36,7 @@
             list-style: none;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            grid-row-gap: 20px;
+            grid-row-gap: 30px;
         }
     }
 
@@ -59,6 +59,19 @@
 
             &:hover {
                 color: $turquoise;
+            }
+        }
+    }
+
+    .social {
+        &-icons {
+            padding-top: 15px;
+            justify-content: flex-end;
+            margin-bottom: 70px;
+        }
+        &-icon {
+            &:not(:first-child) {
+                margin-left: 10px;
             }
         }
     }
@@ -149,6 +162,13 @@
             border-bottom: 1px solid rgba(186, 207, 233,.2);
             margin-bottom: 25px;
         }
+
+        .social {
+            &-icons {
+                justify-content: start;
+                margin-bottom: 0;
+            }
+        }
     }
 
     .policy {
@@ -202,6 +222,12 @@
             &__link {
                 font-size: 15px;
                 line-height: 19px;
+            }
+        }
+
+        .social {
+            &-icons {
+                padding-top: 10px;
             }
         }
     }

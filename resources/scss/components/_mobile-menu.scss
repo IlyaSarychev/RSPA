@@ -6,12 +6,16 @@
     height: 100%;
     background: $black;
     z-index: 500;
-    padding: 20px 17px 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    padding: 20px 0 40px;
     transition: .5s;
     transform: translateY(-100%);
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
 
     &__header {
         width: 100%;
