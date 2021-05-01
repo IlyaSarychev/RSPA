@@ -416,6 +416,7 @@ input {
         border-radius: 10px;
         display: none;
         overflow-y: auto;
+        z-index: 1000;
     }
 
     &__arrow {

@@ -538,6 +538,13 @@
         .title {
             margin-bottom: 20px;
         }
+
+        &::after {
+            width: 1620px;
+            height: 1300px;
+            right: -920px;
+            top: -920px;
+        }
     }
 
     .form {

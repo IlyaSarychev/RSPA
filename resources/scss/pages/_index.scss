@@ -605,9 +605,25 @@
     background: url('../img/form-section-bg.jpg') no-repeat;
     background-size: cover;
     padding: 100px 0;
+    position: relative;
+    overflow: hidden;
 
     .title {
         margin-bottom: 50px;
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        height: 1880px;
+        width: 2350px;
+        background: url('../img/form-dinamics.png') no-repeat;
+        background-size: cover;
+        position: absolute;
+        right: -1355px;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
     }
 }
 
