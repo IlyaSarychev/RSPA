@@ -275,4 +275,18 @@ jQuery(document).ready(function() {
         $('.modal').removeClass('show')
         $('html,body').removeClass('modal-active')
     })
+
+    let dinamics = $('.dinamics')
+    
+    $('.dinamics img').each((i, el) => {
+        el.addEventListener('animationend', function() {
+            $(this).removeClass('animate')
+            if ($(this).is(':last-child')) {
+                dinamics.find('img:first-child').addClass('animate')
+            } else {
+                $(this).next('img').addClass('animate')
+            }
+            
+        }) 
+    })
 })

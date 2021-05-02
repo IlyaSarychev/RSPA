@@ -110,9 +110,11 @@
     .dinamics {
         top: -1215px;
         right: -930px;
+        width: 1500px;
+        height: 1600px;
 
         & > img {
-            width: 1540px;
+            width: 100%;
         }
     }
 

@@ -38,19 +38,37 @@
     position: absolute;
     right: -1195px;
     top: -1585px;
+    width: 2005px;
+    height: 2060px;
     z-index: -1;
     // animation: din-rotate 5s linear infinite;
+    &>img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        &.animate {
+            animation: din-rotate 3.5s linear;
+        }
+    }
 }
 
-// @keyframes din-rotate {
-//     0% {
-//         transform: rotate(0);
-//     }
+@keyframes din-rotate {
+    0% {
+        opacity: 1;
+        transform: rotate(0);
+    }
 
-//     100% {
-//         transform: rotate(360deg);
-//     }
-// }
+    90% {
+        transform: rotate(5deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotate(50deg);
+        opacity: 0;
+    }
+}
 
 .offer {
     &__title {
