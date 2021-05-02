@@ -439,4 +439,22 @@
             right: -630px;
         }
     }
+
+    .input-file {
+        span {
+            max-width: 200px;
+        }
+    }
+
+    .form-quest {
+        .form-download {
+            height: 50px;
+            margin-top: 15px;
+            
+        }
+        .button[type="submit"] {
+            width: 100%;
+            margin-top: 25px;
+        }
+    }
 }

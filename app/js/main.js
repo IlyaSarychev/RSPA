@@ -265,4 +265,14 @@ jQuery(document).ready(function() {
         e.preventDefault()
         closeModal($(this).closest('.modal').attr('id'))
     })
+
+    $('.modal button[type="submit"]').click(function() {
+        $(this).closest('.modal').find('.modal-success').show()
+        $(this).closest('form').hide()
+    })
+
+    $('.modal-success .close-modal').click(e => {
+        $('.modal').removeClass('show')
+        $('html,body').removeClass('modal-active')
+    })
 })

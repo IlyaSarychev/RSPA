@@ -154,4 +154,52 @@
             }
         }
     }
+
+    .input-file {
+        span {
+            max-width: 395px;
+        }
+    }
+
+    .modal {
+        &-logo {
+            &>img {
+                width: 60px;
+            }
+        }
+        &-back {
+            font-size: 12px;
+            line-height: 12px;
+            &__arrow {
+                svg {
+                    width: 20px;
+                }
+            }
+        }
+        &-header {
+            .container {
+                height: 80px;
+            }
+        }
+        &-body {
+            .container {
+                padding-top: 20px;
+                padding-bottom: 75px;
+            }
+        }
+    }
+
+    .form-quest {
+        overflow: hidden;
+        input {
+            margin-top: 15px;
+        }
+        &__title {
+            font-size: 14px;
+            line-height: 16px;
+        }
+        &__hr {
+            margin: 20px 0;
+        }
+    }
 }
