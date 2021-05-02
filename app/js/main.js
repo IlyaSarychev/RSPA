@@ -40,16 +40,28 @@ jQuery(document).ready(function() {
     let guestprogSlider = jQuery('.guestprog-slider').slick({
         autoplay: false,
         arrows: false,
+        asNavFor: '.guestprogramm-slider-wrapper .img-slider',
+        fade: true,
+        speed: 0,
         responsive: [
             {
                 breakpoint: 991,
                 settings: {
                     dots: true,
                     dotsClass: 'slick-dots blue-dots custom-list',
-                    adaptiveHeight: true
+                    adaptiveHeight: true,
+                    speed: 1500,
+                    fade: false
                 }
             }
         ]
+    })
+
+    let imgGuestSlider = $('.guestprogramm-slider-wrapper .img-slider').slick({
+        arrows: false,
+        asNavFor: '.guestprogramm-slider-wrapper .guestprog-slider',
+        fade: true,
+        speed: 0
     })
 
     function changeSliderButtonsClasses(buttons, activeIdx) {

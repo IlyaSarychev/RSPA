@@ -1,9 +1,12 @@
 .guestprog-slide {
+
     &__img {
         max-width: 640px;
         border-radius: 40px;
         overflow: hidden;
         margin-left: auto;
+        transition: 1.5s;
+        clip-path: circle(0% at 0% 100%);
 
         & > img {
             display: block;
@@ -30,9 +33,11 @@
 
     &__content {
         width: 640px;
-        margin-top: -270px;
         padding: 50px 20px;
         position: relative;
+        opacity: 0;
+        transition: 1s;
+        transition-delay: .3s;
     }
 
     &__title {
@@ -53,5 +58,32 @@
         font-family: $ffM;
         color: $black;
         font-weight: 300;
+    }
+}
+
+.guestprog-slider {
+    margin-top: -270px;
+
+    .slick-active {
+        .guestprog-slide {
+            &__content {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.img-slider {
+    max-width: 640px;
+    border-radius: 40px;
+    overflow: hidden;
+    margin-left: auto;
+
+    .slick-active {
+        .guestprog-slide {
+            &__img {
+                clip-path: circle(200% at 0% 100%);
+            }
+        }
     }
 }
