@@ -404,6 +404,8 @@
         &-slide {
             border-radius: 40px;
             overflow: hidden;
+            transition: .5s;
+            transform: scale(.9);
 
             &__content {
                 max-width: none;
@@ -417,6 +419,7 @@
                 margin-top: 0;
                 top: 0;
                 width: 100%;
+                clip-path: none;
             }
 
             &__title {
@@ -429,6 +432,14 @@
 
             &__speaker {
                 color: $white;
+            }
+        }
+    }
+
+    .workprog-slider {
+        .slick-active {
+            .workprog-slide {
+                transform: scale(1);
             }
         }
     }

@@ -11,13 +11,19 @@ jQuery(document).ready(function() {
     let workprogSlider = jQuery('.workprog-slider').slick({
         autoplay: false,
         arrows: false,
+        fade: true,
+        speed: 1500,
+        waitForAnimate: false,
+        speed: 0,
         responsive: [
             {
                 breakpoint: 991,
                 settings: {
                     dots: true,
                     dotsClass: 'slick-dots custom-list',
-                    adaptiveHeight: true
+                    adaptiveHeight: true,
+                    fade: false,
+                    speed: 1500,
                 }
             }
         ]

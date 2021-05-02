@@ -4,6 +4,9 @@
     &__content {
         margin-left: auto;
         max-width: 530px;
+        opacity: 0;
+        transition: 1.5s;
+        transition-delay: .3s;
     }
 
     &__title {
@@ -34,6 +37,8 @@
         margin-top: -235px;
         position: relative;
         z-index: -1;
+        clip-path: circle(0% at 0% 100%);
+        
 
         & > img {
             display: block;
@@ -56,6 +61,18 @@
         .arrow {
             &--next {
                 margin-left: 10px;
+            }
+        }
+    }
+
+    .slick-active {
+        .workprog-slide {
+            &__img {
+                clip-path: circle(200% at 0% 100%);
+                transition: 1.5s;
+            }
+            &__content {
+                opacity: 1;
             }
         }
     }
