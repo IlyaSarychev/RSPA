@@ -202,4 +202,8 @@
             margin: 20px 0;
         }
     }
+
+    .mobile-menu {
+        clip-path: circle(0px at calc((100vw - 540px) / 2 + 540px) 35px);
+    }
 }

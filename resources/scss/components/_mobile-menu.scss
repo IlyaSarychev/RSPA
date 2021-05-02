@@ -7,8 +7,8 @@
     background: $black;
     z-index: 500;
     padding: 20px 0 40px;
-    transition: .5s;
-    transform: translateY(-100%);
+    transition: .6s ease-in;
+    clip-path: circle(0px at calc((100vw - 725px) / 2 + 725px) 35px);
 
     .container {
         display: flex;
@@ -69,6 +69,6 @@
     }
 
     &.show {
-        transform: translateY(0);
+        clip-path: circle(200% at 0% 0%);
     }
 }

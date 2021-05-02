@@ -457,4 +457,8 @@
             margin-top: 25px;
         }
     }
+
+    .mobile-menu {
+        clip-path: circle(0px at calc(100vw - 17px) 35px);
+    }
 }
