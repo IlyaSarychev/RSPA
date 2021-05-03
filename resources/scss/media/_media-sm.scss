@@ -437,13 +437,11 @@
         }
     }
 
-    .section-form {
-        &::after {
-            width: 995px;
-            height: 795px;
-            top: -615px;
-            right: -630px;
-        }
+    .part-dinamics {
+        width: 995px;
+        height: 795px;
+        top: -615px;
+        right: -630px;
     }
 
     .input-file {

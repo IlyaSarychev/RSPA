@@ -5,6 +5,7 @@
     overflow: hidden;
     background: url('../img/bg-gradient.svg');
     background-size: cover;
+    background-attachment: fixed;
 
     .wrapper {
         margin-top: 260px;
@@ -172,6 +173,7 @@
     padding: 100px 0 75px;
     position: relative;
     overflow: hidden;
+    background-attachment: fixed;
 
     .bg-gradient {
         width: 1185px;
@@ -441,6 +443,7 @@
     position: relative;
     overflow: hidden;
     padding: 100px 0;
+    background-attachment: fixed;
 
     .bg-gradient {
         width: 1200px;
@@ -491,6 +494,7 @@
     padding: 120px 0;
     position: relative;
     overflow: hidden;
+    background-attachment: fixed;
 
     .title {
         color: $black;
@@ -532,6 +536,7 @@
     padding: 100px 0;
     background: url('../img/experts-gradient.svg') no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 .experts {
@@ -642,24 +647,24 @@
     padding: 100px 0;
     position: relative;
     overflow: hidden;
+    background-attachment: fixed;
 
     .title {
         margin-bottom: 50px;
     }
+}
 
-    &::after {
-        content: '';
-        display: block;
-        height: 1880px;
-        width: 2350px;
-        background: url('../img/form-dinamics.png') no-repeat;
-        background-size: cover;
-        position: absolute;
-        right: -1355px;
-        top: 0;
-        bottom: 0;
-        margin: auto 0;
-    }
+.part-dinamics {
+    display: block;
+    height: 1880px;
+    width: 2350px;
+    background: url('../img/form-dinamics.png') no-repeat;
+    background-size: cover;
+    position: absolute;
+    right: -1355px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
 }
 
 .form {

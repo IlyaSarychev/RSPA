@@ -325,43 +325,10 @@ jQuery(document).ready(function () {
     //     type: 'foreground'
     // })
 
-    let rellax = new Rellax('.section-offer .title', {
+    let rellax = new Rellax('.parallax', {
         center: true,
         vertical: true,
         breakpoints: [576, 768, 1201]
-    });
-
-    let nomTitleParallax = new Rellax('.section-nomination .title--nom', {
-        center: true,
-        vertical: true,
-        breakpoints: [576, 768, 1201]
-    });
-
-    let workprogParallax = new Rellax('.workprog-slide__img', {
-        // speed: -0.5,
-        center: true,
-        vertical: true,
-        breakpoints: [576, 768, 1201]
-    });
-
-    let imgSliderParallax = new Rellax('.img-slider', {
-        // speed: -1,
-        center: true,
-        vertical: true,
-        breakpoints: [576, 768, 1201]
-    });
-
-    let guestTitleParallax = new Rellax('.title-parallax', {
-        // speed: 1,
-        center: true,
-        vertical: true,
-        breakpoints: [576, 768, 1201]
-    });
-
-    let expertsTitleParallax = new Rellax('.experts__wrapper--mobile', {
-        // speed: 1,
-        center: true,
-        vertical: true
     });
 
     // let expertsTitleParallax = new Rellax('.experts__wrapper', {
