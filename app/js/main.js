@@ -197,6 +197,11 @@ jQuery(document).ready(function () {
         jQuery('html, body').animate({ scrollTop: jQuery(`#${jQuery(this).attr('href').slice(1)}`).offset().top - jQuery('.header').height() }, 500, 'swing')
     })
 
+    jQuery('.offer__button').click(function (e) {
+        e.preventDefault()
+        jQuery('html, body').animate({ scrollTop: jQuery(`.section-form`).offset().top - jQuery('.header').height() }, 500, 'swing')
+    })
+
     jQuery('.select__header').click(function () {
         jQuery(this).closest('.select').toggleClass('show')
     })
@@ -314,13 +319,20 @@ jQuery(document).ready(function () {
         })
     })
 
-    //foreground parallax
-
     let rellax = new Rellax('.parallax', {
         center: true,
         vertical: true,
         breakpoints: [576, 768, 1201]
     });
 
-    // background parallax
+    $('.form-part button[type="submit"]').click(function() {
+        let form = $(this).closest('form')
+        if (form.find('input.select-input').val() === 'member') {
+            openModal('member-modal')
+            let modal = $('#member-modal')
+            modal.find('input[name="name"]').val(form.find('input[name="name"]').val())
+            modal.find('input[name="email"]').val(form.find('input[name="email"]').val())
+            modal.find('input[name="phone"]').val(form.find('input[name="phone"]').val())
+        }
+    })
 })
