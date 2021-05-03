@@ -101,13 +101,17 @@
     .b-nom {
         height: 270px;
 
+        &:not(:last-child) {
+            margin-right: 15px;
+        }
+
         &__title {
             font-size: 15px;
             line-height: 19px;
         }
 
         &-wrapper {
-            gap: 15px;
+            gap: initial;
             overflow: scroll;
             width: initial;
         }
@@ -395,8 +399,6 @@
     }
 
     .experts {
-        grid-gap: 15px;
-
         &__wrapper {
             margin-top: 0;
             margin-bottom: 20px;
@@ -415,6 +417,9 @@
 
     .expert {
         border-radius: 15px;
+        &:not(:last-child) {
+            margin-right: 15px;
+        }
     }
 
     .partners {

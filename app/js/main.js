@@ -1,6 +1,6 @@
-jQuery(document).ready(function() {
+jQuery(document).ready(function () {
 
-    jQuery(window).scroll(function() {
+    jQuery(window).scroll(function () {
         if (jQuery(window).scrollTop() > 100) {
             jQuery('.header').addClass('header--scroll')
         } else {
@@ -90,13 +90,13 @@ jQuery(document).ready(function() {
     bindButtonsToSlider(jQuery('.section-guestprogramm .slider-buttons__btn'), guestprogSlider)
 
     function paddingsAndMarginsForMobileXScroll() {
-        let container = jQuery('.container').width()
+        let container = jQuery('.section-offer .container').width()
         let vw = jQuery(window).width()
 
         if (vw < 992) {
             jQuery('.experts').css({
-                'margin-left': -(vw - container) / 2 + 'px',
-                'margin-right': -(vw - container) / 2 + 'px',
+                'margin-left': -((vw - container) / 2) + 'px',
+                'margin-right': -((vw - container) / 2) + 'px',
                 'padding-left': (vw - container) / 2 + 'px',
                 'padding-right': (vw - container) / 2 + 'px',
             })
@@ -179,19 +179,25 @@ jQuery(document).ready(function() {
 
     jQuery('.burger').click(() => {
         jQuery('.mobile-menu').addClass('show')
+        setTimeout(() => {
+            $('.mobile-menu').addClass('animate')
+        }, 100)
     })
 
     jQuery('.mobile-menu__button').click(() => {
-        jQuery('.mobile-menu').removeClass('show')
+        $('.mobile-menu').one('transitionend', function () {
+            jQuery('.mobile-menu').removeClass('show')
+        })
+        $('.mobile-menu').removeClass('animate')
     })
 
-    jQuery('a[href^="#"]').click(function(e) {
+    jQuery('a[href^="#"]').click(function (e) {
         if ($(this).attr('href').length < 2) return
         e.preventDefault()
-        jQuery('html, body').animate({scrollTop: jQuery(`#${jQuery(this).attr('href').slice(1)}`).offset().top - jQuery('.header').height()}, 500, 'swing')
+        jQuery('html, body').animate({ scrollTop: jQuery(`#${jQuery(this).attr('href').slice(1)}`).offset().top - jQuery('.header').height() }, 500, 'swing')
     })
 
-    jQuery('.select__header').click(function() {
+    jQuery('.select__header').click(function () {
         jQuery(this).closest('.select').toggleClass('show')
     })
 
@@ -201,7 +207,7 @@ jQuery(document).ready(function() {
         jQuery('.select').removeClass('show')
         let select = jQuery(this).closest('.select')
         let input = select.next('input[type="hidden"]')
-        
+
         if (!select.hasClass('select--chosen')) {
             select.addClass('select--chosen')
             select.find('.select__header span').text(jQuery(this).text())
@@ -224,11 +230,11 @@ jQuery(document).ready(function() {
         e.preventDefault()
     })
 
-    jQuery('form input').change(function() {
+    jQuery('form input').change(function () {
         let form = jQuery(this).closest('form')
-        
+
         form.find('input').each((i, el) => {
-            
+
             if (jQuery(el).val().length) {
                 jQuery(el).addClass('valid')
             }
@@ -255,15 +261,15 @@ jQuery(document).ready(function() {
             jQuery('.modal.show').removeClass('show');
             jQuery('body,html').removeClass('modal-active');
         }
-    
+
     });
-    
+
     // modal
     function openModal(id) {
         jQuery('.modal#' + id).addClass('show');
         jQuery('body,html').addClass('modal-active');
     }
-    
+
     function closeModal() {
         jQuery('.modal.show').removeClass('show');
         jQuery('body,html').removeClass('modal-active');
@@ -279,12 +285,12 @@ jQuery(document).ready(function() {
         openModal('member-modal')
     })
 
-    $('.modal-back').click(function(e) {
+    $('.modal-back').click(function (e) {
         e.preventDefault()
         closeModal($(this).closest('.modal').attr('id'))
     })
 
-    $('.modal button[type="submit"]').click(function() {
+    $('.modal button[type="submit"]').click(function () {
         $(this).closest('.modal').find('.modal-success').show()
         $(this).closest('form').hide()
     })
@@ -295,16 +301,75 @@ jQuery(document).ready(function() {
     })
 
     let dinamics = $('.dinamics')
-    
+
     $('.dinamics img').each((i, el) => {
-        el.addEventListener('animationend', function() {
+        el.addEventListener('animationend', function () {
             $(this).removeClass('animate')
             if ($(this).is(':last-child')) {
                 dinamics.find('img:first-child').addClass('animate')
             } else {
                 $(this).next('img').addClass('animate')
             }
-            
-        }) 
+
+        })
     })
+
+    //foreground parallax
+
+    // $('.section-offer').paroller({
+    //     factor: +0.5
+    // })
+
+    // $('.section-offer .title').paroller({
+    //     factor: +0.05,
+    //     type: 'foreground'
+    // })
+
+    let rellax = new Rellax('.section-offer .title', {
+        center: true,
+        vertical: true,
+        breakpoints: [576, 768, 1201]
+    });
+
+    let nomTitleParallax = new Rellax('.section-nomination .title--nom', {
+        center: true,
+        vertical: true,
+        breakpoints: [576, 768, 1201]
+    });
+
+    let workprogParallax = new Rellax('.workprog-slide__img', {
+        // speed: -0.5,
+        center: true,
+        vertical: true,
+        breakpoints: [576, 768, 1201]
+    });
+
+    let imgSliderParallax = new Rellax('.img-slider', {
+        // speed: -1,
+        center: true,
+        vertical: true,
+        breakpoints: [576, 768, 1201]
+    });
+
+    let guestTitleParallax = new Rellax('.title-parallax', {
+        // speed: 1,
+        center: true,
+        vertical: true,
+        breakpoints: [576, 768, 1201]
+    });
+
+    let expertsTitleParallax = new Rellax('.experts__wrapper--mobile', {
+        // speed: 1,
+        center: true,
+        vertical: true
+    });
+
+    // let expertsTitleParallax = new Rellax('.experts__wrapper', {
+    //     speed: 1,
+    //     center: true,
+    //     vertical: true
+    // });
+
+    // background parallax
+    
 })

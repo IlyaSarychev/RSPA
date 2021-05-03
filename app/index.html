@@ -65,7 +65,7 @@
             </div>
         </header>
         <main>
-            <section class="section-offer" id="offer">
+            <section class="section-offer" id="offer" style="background-image: url('img/bg-gradient.svg');">
                 <div class="container">
                     <div class="offer-wrapper">
                         <div class="offer">
@@ -87,7 +87,13 @@
                         <img src="img/dinamics-3.png" alt="">
                     </div>
                     <div class="wrapper" id="about">
-                        <h2 class="title">RSPA — это</h2>
+                        <h2 class="title"
+                            data-rellax-speed="2" 
+                            data-rellax-xs-speed="1" 
+                            data-rellax-mobile-speed="1" 
+                            data-rellax-tablet-speed="1" 
+                            data-rellax-desktop-speed="1"
+                        >RSPA — это</h2>
                         <div class="offer-eggs">
                             <div class="offer-egg">
                                 <div class="offer-egg__icon offer-egg__icon--1"></div>
@@ -127,7 +133,13 @@
             <section class="section-nomination" id="nomination">
                 <div class="container">
                     <div class="title-wrapper">
-                        <h2 class="title title--nom">номинации</h2>
+                        <h2 class="title title--nom"
+                        data-rellax-speed="0" 
+                        data-rellax-xs-speed=".5" 
+                        data-rellax-mobile-speed=".5" 
+                        data-rellax-tablet-speed="0" 
+                        data-rellax-desktop-speed="0"
+                        >номинации</h2>
                         <div class="nom-date">
                             <p class="nom-date__text">Сроки подачи заявки</p>
                             <strong class="nom-date__date">до 31 авг 2021</strong>
@@ -279,7 +291,13 @@
                                                 года.
                                             </p>
                                         </div>
-                                        <div class="workprog-slide__img">
+                                        <div class="workprog-slide__img"
+                                            data-rellax-speed="-0.5" 
+                                            data-rellax-xs-speed="0" 
+                                            data-rellax-mobile-speed="0" 
+                                            data-rellax-tablet-speed="-0.5" 
+                                            data-rellax-desktop-speed="-0.5"
+                                        >
                                             <img src="img/slider-photo.jpg" alt="">
                                         </div>
                                     </div>
@@ -330,10 +348,22 @@
             </section>
             <section class="section-guestprogramm" id="guestprogramm">
                 <div class="container">
-                    <h2 class="title">гостевая программа</h2>
+                    <h2 class="title title-parallax"
+                        data-rellax-speed="1" 
+                        data-rellax-xs-speed="0.5" 
+                        data-rellax-mobile-speed="0.5" 
+                        data-rellax-tablet-speed="1" 
+                        data-rellax-desktop-speed="1"
+                    >гостевая программа</h2>
                     <div class="wrapper">
                         <div class="guestprogramm-slider-wrapper">
-                            <div class="img-slider">
+                            <div class="img-slider"
+                                data-rellax-speed="-1" 
+                                data-rellax-xs-speed="0" 
+                                data-rellax-mobile-speed="0" 
+                                data-rellax-tablet-speed="-1" 
+                                data-rellax-desktop-speed="-1"
+                            >
                                 <div>
                                     <div class="guestprog-slide__img">
                                         <img src="img/guest-slider-photo.jpg" alt="">
@@ -459,7 +489,13 @@
             </section>
             <section class="section-experts" id="experts">
                 <div class="container">
-                    <div class="experts__wrapper experts__wrapper--mobile">
+                    <div class="experts__wrapper experts__wrapper--mobile"
+                        data-rellax-speed="0" 
+                        data-rellax-xs-speed="0.5" 
+                        data-rellax-mobile-speed="0.5" 
+                        data-rellax-tablet-speed="0" 
+                        data-rellax-desktop-speed="0"
+                    >
                         <h2 class="title experts__title">Эксперты</h2>
                         <p class="experts__text">
                             Уникальный отраслевой конкурс для&nbsp;технических компаний, специалистов по продакшену
@@ -546,7 +582,13 @@
                                 говорит «да!».
                             </p>
                         </div>
-                        <div class="experts__wrapper">
+                        <div class="experts__wrapper title-parallax"
+                            data-rellax-speed="1" 
+                            data-rellax-xs-speed="0.5" 
+                            data-rellax-mobile-speed="0.5" 
+                            data-rellax-tablet-speed="1" 
+                            data-rellax-desktop-speed="1"
+                        >
                             <h2 class="title experts__title">Эксперты</h2>
                             <p class="experts__text">
                                 Уникальный отраслевой конкурс для технических компаний, специалистов по продакшену
@@ -556,7 +598,13 @@
                     </div>
                     <div class="partners">
                         <div class="partners__wrapper">
-                            <h2 class="partners__title title">Партнёры
+                            <h2 class="partners__title title title-parallax"
+                                data-rellax-speed="1" 
+                                data-rellax-xs-speed="0.5" 
+                                data-rellax-mobile-speed="0.5" 
+                                data-rellax-tablet-speed="1" 
+                                data-rellax-desktop-speed="1"
+                            >Партнёры
                                 и&nbsp;спонсоры</h2>
                             <button class="partners__button button">стать спонсором</button>
                         </div>
@@ -924,6 +972,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="libs/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 

@@ -323,11 +323,16 @@ h3.title {
         margin: 0;
         list-style: none;
         display: flex;
-        gap: 10px;
 
         li.slick-active {
             button {
                 opacity: .5;
+            }
+        }
+
+        li {
+            &:not(:last-child) {
+                margin-right: 10px;
             }
         }
 

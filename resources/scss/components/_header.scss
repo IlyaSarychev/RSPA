@@ -60,7 +60,7 @@
     &::before {
         content: '';
         height: 3px;
-        width: 19px;
+        width: 100%;
         background: $turquoise;
         position: absolute;
         top: -6px;
@@ -70,7 +70,7 @@
     &::after {
         content: '';
         height: 3px;
-        width: 10px;
+        width: 50%;
         background: $turquoise;
         position: absolute;
         bottom: -6px;

@@ -9,6 +9,7 @@
     padding: 20px 0 40px;
     transition: .6s ease-in;
     clip-path: circle(0px at calc((100vw - 725px) / 2 + 725px) 35px);
+    display: none;
 
     .container {
         display: flex;
@@ -69,6 +70,10 @@
     }
 
     &.show {
+        display: block;
+    }
+
+    &.animate {
         clip-path: circle(200% at 0% 0%);
     }
 }
