@@ -69,7 +69,7 @@
         .workprog-slide {
             &__img {
                 clip-path: circle(200% at 0% 100%);
-                transition: 1.5s;
+                transition: clip-path 1.5s;
             }
             &__content {
                 opacity: 1;

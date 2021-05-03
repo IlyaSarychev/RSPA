@@ -316,27 +316,11 @@ jQuery(document).ready(function () {
 
     //foreground parallax
 
-    // $('.section-offer').paroller({
-    //     factor: +0.5
-    // })
-
-    // $('.section-offer .title').paroller({
-    //     factor: +0.05,
-    //     type: 'foreground'
-    // })
-
     let rellax = new Rellax('.parallax', {
         center: true,
         vertical: true,
         breakpoints: [576, 768, 1201]
     });
 
-    // let expertsTitleParallax = new Rellax('.experts__wrapper', {
-    //     speed: 1,
-    //     center: true,
-    //     vertical: true
-    // });
-
     // background parallax
-    
 })
