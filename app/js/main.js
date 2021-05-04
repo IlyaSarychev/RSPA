@@ -290,11 +290,11 @@ jQuery(document).ready(function () {
         openModal('member-modal')
     })
 
-    jQuery('.workprog-offer .button').click(e => {
+    jQuery('.section-workprogramm .button').click(e => {
         openModal('speaker-modal')
     })
 
-    jQuery('.partners__button').click(e => {
+    jQuery('.partners .button').click(e => {
         openModal('sponsor-modal')
     })
 
