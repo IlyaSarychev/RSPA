@@ -334,15 +334,21 @@ jQuery(document).ready(function () {
             modal.find('input[name="email"]').val(form.find('input[name="email"]').val())
             modal.find('input[name="phone"]').val(form.find('input[name="phone"]').val())
         }
+        if (form.find('input.select-input').val() === 'speaker') {
+            openModal('speaker-modal')
+            let modal = $('#speaker-modal')
+            modal.find('input[name="name"]').val(form.find('input[name="name"]').val())
+            modal.find('input[name="email"]').val(form.find('input[name="email"]').val())
+            modal.find('input[name="phone"]').val(form.find('input[name="phone"]').val())
+        }
+        if (form.find('input.select-input').val() === 'sponsor') {
+            openModal('sponsor-modal')
+            let modal = $('#sponsor-modal')
+            modal.find('input[name="name"]').val(form.find('input[name="name"]').val())
+            modal.find('input[name="email"]').val(form.find('input[name="email"]').val())
+            modal.find('input[name="phone"]').val(form.find('input[name="phone"]').val())
+        }
     })
-
-    // $(window).scroll(function() {
-    //     $('section').each(function(i, el) {
-    //         // $(el).animate({
-    //         //     'background-position-y': $(window).scrollTop() - ($(el).innerHeight() / 1.5) + 'px' 
-    //         // }, 1000)
-    //     })
-    // })
 
     $('section').each(function(i, el) {
         if ($(window).width() < 992) return

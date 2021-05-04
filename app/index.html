@@ -976,6 +976,239 @@
         </div>
     </div>
 
+    <div class="modal modal--quest" id="speaker-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="container">
+                    <a href="#" class="modal-back">
+                        <div class="modal-back__arrow">
+                            <svg width="33" height="22" viewBox="0 0 33 22" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 11H33M3 11L14 2M3 11L14 20" stroke="white" stroke-width="3" />
+                            </svg>
+                        </div>
+                        <span class="modal-back__text">Назад к сайту</span>
+                    </a>
+                    <a href="/" class="logo modal-logo">
+                        <img src="img/logo.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <h2 class="title modal-title">Анкета <br> СПИКЕРа</h2>
+                    <form action="#" method="POST" class="form-quest">
+                        <h3 class="form-quest__title">Контакты</h3>
+                        <div class="form-group">
+                            <input type="text" placeholder="ФИО*" name="name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="E-mail*" name="email">
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Телефон*" name="phone">
+                        </div>
+                        <div class="form-quest__hr"></div>
+                        <h3 class="form-quest__title">Спич</h3>
+                        <div class="form-group">
+                            <input type="text" placeholder="Тема*">
+                        </div>
+                        <div class="form-group">
+                            <div class="input-file">
+                                <input id="pres-speaker" type="file">
+                                <label for="pres-speaker">
+                                    <span class="input-file__text">Презентация, если есть (pdf, до 40 мб)</span>
+                                    <div class="input-file__icon">
+                                        <svg width="19" height="21" viewBox="0 0 19 21" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M17 11.5L10.2834 18.2166C8.30948 20.1905 5.11906 20.2223 3.10625 18.288V18.288C1.03599 16.2986 1.00313 12.9969 3.0334 10.9666L11.4282 2.57179C12.8486 1.15143 15.1514 1.15143 16.5718 2.57179V2.57179C17.9922 3.99215 17.9922 6.29501 16.5718 7.71537L8.10629 16.1809C7.27895 17.0082 5.92755 16.9745 5.14245 16.107V16.107C4.41078 15.2985 4.44168 14.0583 5.21271 13.2873L12 6.5"
+                                                stroke="#BACFE9" stroke-width="1.5" />
+                                        </svg>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group form-group--wide">
+                            <textarea name="description-speaker"
+                                placeholder="Описание проекта*
+
+(Опишите для членов жюри, почему вы считаете данный проект достойным получить премию: в чем заключается уникальность проекта (работы), креативная идея, сложность исполнения, с какими задачами и трудностями вы работали и как их решали)"></textarea>
+                        </div>
+                        <button class="button" type="submit">Отправить анкету</button>
+                    </form>
+                    <div class="modal-success">
+                        <p class="modal-success__text">
+                            Спасибо, заявка отправлена! Мы свяжемся с вами в ближайшее время.
+                        </p>
+                        <div class="footer-contacts modal-success__contacts">
+                            <a href="mailto:info@oq.agency" class="footer-contacts__link">INFO@OQ.AGENCY</a>
+                            <a href="tel:+78007079371" class="footer-contacts__link">+7 800 707 93 71</a>
+                            <div class="social-icons">
+                                <a href="#" target="_blank" class="social-icon">
+                                    <svg width="31" height="30" viewBox="0 0 31 30" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="0.953711" y="0.9" width="28.2" height="28.2" rx="8.1" stroke="white"
+                                            stroke-width="1.8" />
+                                        <circle cx="15.0537" cy="15" r="6" stroke="white" stroke-width="1.8" />
+                                        <circle cx="22.5537" cy="6.49989" r="1.14784" fill="white" stroke="white"
+                                            stroke-width="1.14784" />
+                                    </svg>
+                                </a>
+                                <a href="#" target="_blank" class="social-icon">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="0.9" y="0.9" width="28.2" height="28.2" rx="8.1" stroke="white"
+                                            stroke-width="1.8" />
+                                        <path
+                                            d="M14.2542 20.3631H15.3165C15.3165 20.3631 15.6376 20.3292 15.801 20.1603C15.9521 20.0052 15.9466 19.7141 15.9466 19.7141C15.9466 19.7141 15.9254 18.3512 16.5877 18.1504C17.24 17.9529 18.0778 19.4677 18.9657 20.0508C19.6368 20.4917 20.1469 20.395 20.1469 20.395L22.5215 20.3631C22.5215 20.3631 23.7638 20.2899 23.1749 19.3561C23.1271 19.2796 22.8315 18.6656 21.4092 17.4037C19.9202 16.0822 20.1202 16.2968 21.9137 14.0118C23.006 12.6203 23.4427 11.7705 23.306 11.4072C23.176 11.0609 22.3726 11.1522 22.3726 11.1522L19.7013 11.1671C19.7013 11.1671 19.5035 11.1416 19.3557 11.2255C19.2123 11.3084 19.1201 11.4996 19.1201 11.4996C19.1201 11.4996 18.6968 12.5767 18.1323 13.4924C16.9422 15.4247 16.4655 15.5266 16.271 15.4066C15.8188 15.1272 15.9321 14.2827 15.9321 13.6836C15.9321 11.8108 16.2288 11.0301 15.3532 10.8282C15.062 10.7613 14.8487 10.7167 14.1053 10.7092C13.1519 10.6997 12.3441 10.7124 11.8874 10.9259C11.5829 11.0683 11.3484 11.3859 11.4918 11.404C11.6685 11.4263 12.0685 11.507 12.2807 11.7832C12.5552 12.1391 12.5452 12.94 12.5452 12.94C12.5452 12.94 12.703 15.1442 12.1774 15.4183C11.8162 15.6063 11.3218 15.2228 10.2606 13.469C9.71721 12.5714 9.30607 11.5782 9.30607 11.5782C9.30607 11.5782 9.22717 11.3933 9.08605 11.2946C8.91493 11.1745 8.67491 11.1363 8.67491 11.1363L6.13472 11.1511C6.13472 11.1511 5.75358 11.1618 5.61357 11.3201C5.48912 11.4613 5.60357 11.7524 5.60357 11.7524C5.60357 11.7524 7.59261 16.2001 9.84388 18.4426C11.9096 20.4981 14.2542 20.3631 14.2542 20.3631Z"
+                                            fill="white" />
+                                    </svg>
+                                </a>
+                                <a href="#" target="_blank" class="social-icon">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="0.9" y="0.9" width="28.2" height="28.2" rx="8.1" stroke="white"
+                                            stroke-width="1.8" />
+                                        <path
+                                            d="M21.1862 8.75682L7.39093 13.9815C6.44542 14.3446 6.46211 14.8587 7.22878 15.0977L10.7605 16.1798L18.953 11.1133C19.3333 10.865 19.6862 11.0055 19.3977 11.255L12.7683 17.1379L12.5144 20.7135C12.884 20.7135 13.045 20.5554 13.2357 20.368L14.961 18.7354L18.538 21.3249C19.1902 21.688 19.6564 21.5006 19.8305 20.7299L22.1794 9.86008L22.1782 9.86125C22.3857 8.91024 21.8265 8.5296 21.1862 8.75682Z"
+                                            fill="white" />
+                                    </svg>
+                                </a>
+                                <a href="#" target="_blank" class="social-icon">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="0.9" y="0.9" width="28.2" height="28.2" rx="8.1" stroke="white"
+                                            stroke-width="1.8" />
+                                        <path
+                                            d="M20 6.66675H17.2727C16.0672 6.66675 14.911 7.09476 14.0586 7.85663C13.2062 8.61849 12.7273 9.65181 12.7273 10.7292V13.1667H10V16.4167H12.7273V22.9167H16.3636V16.4167H19.0909L20 13.1667H16.3636V10.7292C16.3636 10.5138 16.4594 10.3071 16.6299 10.1547C16.8004 10.0024 17.0316 9.91675 17.2727 9.91675H20V6.66675Z"
+                                            fill="white" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <button class="button close-modal">Закрыть</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal modal--quest" id="sponsor-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="container">
+                    <a href="#" class="modal-back">
+                        <div class="modal-back__arrow">
+                            <svg width="33" height="22" viewBox="0 0 33 22" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 11H33M3 11L14 2M3 11L14 20" stroke="white" stroke-width="3" />
+                            </svg>
+                        </div>
+                        <span class="modal-back__text">Назад к сайту</span>
+                    </a>
+                    <a href="/" class="logo modal-logo">
+                        <img src="img/logo.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <h2 class="title modal-title">Анкета <br> Спонсора</h2>
+                    <form action="#" method="POST" class="form-quest">
+                        <h3 class="form-quest__title">Контакты</h3>
+                        <div class="form-group">
+                            <input type="text" placeholder="ФИО*" name="name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="E-mail*" name="email">
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Телефон*" name="phone">
+                        </div>
+                        <div class="form-quest__hr"></div>
+                        <h3 class="form-quest__title">Данные Организации</h3>
+                        <div class="form-group">
+                            <input type="text" placeholder="Наименование компании (бренд-наименование)*">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Юридическое название**">
+                        </div>
+                        <div class="form-group">
+                            <div class="input-file">
+                                <input id="req-sponsor" type="file">
+                                <label for="req-sponsor">
+                                    <span class="input-file__text">Реквизиты, карточка организации (pdf, jpg, doc)</span>
+                                    <div class="input-file__icon">
+                                        <svg width="19" height="21" viewBox="0 0 19 21" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M17 11.5L10.2834 18.2166C8.30948 20.1905 5.11906 20.2223 3.10625 18.288V18.288C1.03599 16.2986 1.00313 12.9969 3.0334 10.9666L11.4282 2.57179C12.8486 1.15143 15.1514 1.15143 16.5718 2.57179V2.57179C17.9922 3.99215 17.9922 6.29501 16.5718 7.71537L8.10629 16.1809C7.27895 17.0082 5.92755 16.9745 5.14245 16.107V16.107C4.41078 15.2985 4.44168 14.0583 5.21271 13.2873L12 6.5"
+                                                stroke="#BACFE9" stroke-width="1.5" />
+                                        </svg>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <button class="button" type="submit">Отправить анкету</button>
+                    </form>
+                    <div class="modal-success">
+                        <p class="modal-success__text">
+                            Спасибо, заявка отправлена! Мы свяжемся с вами в ближайшее время.
+                        </p>
+                        <div class="footer-contacts modal-success__contacts">
+                            <a href="mailto:info@oq.agency" class="footer-contacts__link">INFO@OQ.AGENCY</a>
+                            <a href="tel:+78007079371" class="footer-contacts__link">+7 800 707 93 71</a>
+                            <div class="social-icons">
+                                <a href="#" target="_blank" class="social-icon">
+                                    <svg width="31" height="30" viewBox="0 0 31 30" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="0.953711" y="0.9" width="28.2" height="28.2" rx="8.1" stroke="white"
+                                            stroke-width="1.8" />
+                                        <circle cx="15.0537" cy="15" r="6" stroke="white" stroke-width="1.8" />
+                                        <circle cx="22.5537" cy="6.49989" r="1.14784" fill="white" stroke="white"
+                                            stroke-width="1.14784" />
+                                    </svg>
+                                </a>
+                                <a href="#" target="_blank" class="social-icon">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="0.9" y="0.9" width="28.2" height="28.2" rx="8.1" stroke="white"
+                                            stroke-width="1.8" />
+                                        <path
+                                            d="M14.2542 20.3631H15.3165C15.3165 20.3631 15.6376 20.3292 15.801 20.1603C15.9521 20.0052 15.9466 19.7141 15.9466 19.7141C15.9466 19.7141 15.9254 18.3512 16.5877 18.1504C17.24 17.9529 18.0778 19.4677 18.9657 20.0508C19.6368 20.4917 20.1469 20.395 20.1469 20.395L22.5215 20.3631C22.5215 20.3631 23.7638 20.2899 23.1749 19.3561C23.1271 19.2796 22.8315 18.6656 21.4092 17.4037C19.9202 16.0822 20.1202 16.2968 21.9137 14.0118C23.006 12.6203 23.4427 11.7705 23.306 11.4072C23.176 11.0609 22.3726 11.1522 22.3726 11.1522L19.7013 11.1671C19.7013 11.1671 19.5035 11.1416 19.3557 11.2255C19.2123 11.3084 19.1201 11.4996 19.1201 11.4996C19.1201 11.4996 18.6968 12.5767 18.1323 13.4924C16.9422 15.4247 16.4655 15.5266 16.271 15.4066C15.8188 15.1272 15.9321 14.2827 15.9321 13.6836C15.9321 11.8108 16.2288 11.0301 15.3532 10.8282C15.062 10.7613 14.8487 10.7167 14.1053 10.7092C13.1519 10.6997 12.3441 10.7124 11.8874 10.9259C11.5829 11.0683 11.3484 11.3859 11.4918 11.404C11.6685 11.4263 12.0685 11.507 12.2807 11.7832C12.5552 12.1391 12.5452 12.94 12.5452 12.94C12.5452 12.94 12.703 15.1442 12.1774 15.4183C11.8162 15.6063 11.3218 15.2228 10.2606 13.469C9.71721 12.5714 9.30607 11.5782 9.30607 11.5782C9.30607 11.5782 9.22717 11.3933 9.08605 11.2946C8.91493 11.1745 8.67491 11.1363 8.67491 11.1363L6.13472 11.1511C6.13472 11.1511 5.75358 11.1618 5.61357 11.3201C5.48912 11.4613 5.60357 11.7524 5.60357 11.7524C5.60357 11.7524 7.59261 16.2001 9.84388 18.4426C11.9096 20.4981 14.2542 20.3631 14.2542 20.3631Z"
+                                            fill="white" />
+                                    </svg>
+                                </a>
+                                <a href="#" target="_blank" class="social-icon">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="0.9" y="0.9" width="28.2" height="28.2" rx="8.1" stroke="white"
+                                            stroke-width="1.8" />
+                                        <path
+                                            d="M21.1862 8.75682L7.39093 13.9815C6.44542 14.3446 6.46211 14.8587 7.22878 15.0977L10.7605 16.1798L18.953 11.1133C19.3333 10.865 19.6862 11.0055 19.3977 11.255L12.7683 17.1379L12.5144 20.7135C12.884 20.7135 13.045 20.5554 13.2357 20.368L14.961 18.7354L18.538 21.3249C19.1902 21.688 19.6564 21.5006 19.8305 20.7299L22.1794 9.86008L22.1782 9.86125C22.3857 8.91024 21.8265 8.5296 21.1862 8.75682Z"
+                                            fill="white" />
+                                    </svg>
+                                </a>
+                                <a href="#" target="_blank" class="social-icon">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="0.9" y="0.9" width="28.2" height="28.2" rx="8.1" stroke="white"
+                                            stroke-width="1.8" />
+                                        <path
+                                            d="M20 6.66675H17.2727C16.0672 6.66675 14.911 7.09476 14.0586 7.85663C13.2062 8.61849 12.7273 9.65181 12.7273 10.7292V13.1667H10V16.4167H12.7273V22.9167H16.3636V16.4167H19.0909L20 13.1667H16.3636V10.7292C16.3636 10.5138 16.4594 10.3071 16.6299 10.1547C16.8004 10.0024 17.0316 9.91675 17.2727 9.91675H20V6.66675Z"
+                                            fill="white" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <button class="button close-modal">Закрыть</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="libs/slick.min.js"></script>

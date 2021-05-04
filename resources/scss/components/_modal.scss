@@ -197,6 +197,9 @@
             &:focus {
                 border: 1px solid $turquoise;
             }
+            &::placeholder {
+                color: #BACFE9;
+            }
         }
 
         .form-group {
