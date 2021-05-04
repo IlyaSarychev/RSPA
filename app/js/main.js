@@ -335,4 +335,21 @@ jQuery(document).ready(function () {
             modal.find('input[name="phone"]').val(form.find('input[name="phone"]').val())
         }
     })
+
+    // $(window).scroll(function() {
+    //     $('section').each(function(i, el) {
+    //         // $(el).animate({
+    //         //     'background-position-y': $(window).scrollTop() - ($(el).innerHeight() / 1.5) + 'px' 
+    //         // }, 1000)
+    //     })
+    // })
+
+    $('section').each(function(i, el) {
+        if ($(window).width() < 992) return
+        $(window).scroll(function() {
+            let yPos = ($(window).scrollTop() - $(el).position().top) / $(el).data('bg-speed');
+            let coords = 'center '+ yPos + 'px';
+            $(el).css({ backgroundPosition: coords });
+        })
+    })
 })
