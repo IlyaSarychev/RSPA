@@ -57,7 +57,7 @@ jQuery(document).ready(function () {
         ]
     })
 
-    let imgGuestSlider = $('.guestprogramm-slider-wrapper .img-slider').slick({
+    let imgGuestSlider = jQuery('.guestprogramm-slider-wrapper .img-slider').slick({
         arrows: false,
         asNavFor: '.guestprogramm-slider-wrapper .guestprog-slider',
         fade: true,
@@ -180,19 +180,19 @@ jQuery(document).ready(function () {
     jQuery('.burger').click(() => {
         jQuery('.mobile-menu').addClass('show')
         setTimeout(() => {
-            $('.mobile-menu').addClass('animate')
+            jQuery('.mobile-menu').addClass('animate')
         }, 100)
     })
 
     jQuery('.mobile-menu__button').click(() => {
-        $('.mobile-menu').one('transitionend', function () {
+        jQuery('.mobile-menu').one('transitionend', function () {
             jQuery('.mobile-menu').removeClass('show')
         })
-        $('.mobile-menu').removeClass('animate')
+        jQuery('.mobile-menu').removeClass('animate')
     })
 
     jQuery('a[href^="#"]').click(function (e) {
-        if ($(this).attr('href').length < 2) return
+        if (jQuery(this).attr('href').length < 2) return
         e.preventDefault()
         jQuery('html, body').animate({ scrollTop: jQuery(`#${jQuery(this).attr('href').slice(1)}`).offset().top - jQuery('.header').height() }, 500, 'swing')
     })
@@ -244,11 +244,11 @@ jQuery(document).ready(function () {
                 jQuery(el).addClass('valid')
             }
 
-            if ($(el).attr('type') === 'file') {
+            if (jQuery(el).attr('type') === 'file') {
                 if (el.files.length) {
-                    $(el).addClass('valid')
-                    $(el).closest('.input-file').addClass('contains')
-                    $(el).next('label').find('.input-file__text').text(el.files[0].name)
+                    jQuery(el).addClass('valid')
+                    jQuery(el).closest('.input-file').addClass('contains')
+                    jQuery(el).next('label').find('.input-file__text').text(el.files[0].name)
                 }
             }
         })
@@ -280,40 +280,48 @@ jQuery(document).ready(function () {
         jQuery('body,html').removeClass('modal-active');
     }
 
-    $(document).click(e => {
-        if (!$(e.target).hasClass('select') && !$(e.target).closest('.select').length) {
-            $('.select').removeClass('show')
+    jQuery(document).click(e => {
+        if (!jQuery(e.target).hasClass('select') && !jQuery(e.target).closest('.select').length) {
+            jQuery('.select').removeClass('show')
         }
     })
 
-    $('.info-wrapper .button').click(e => {
+    jQuery('.info-wrapper .button').click(e => {
         openModal('member-modal')
     })
 
-    $('.modal-back').click(function (e) {
+    jQuery('.workprog-offer .button').click(e => {
+        openModal('speaker-modal')
+    })
+
+    jQuery('.partners__button').click(e => {
+        openModal('sponsor-modal')
+    })
+
+    jQuery('.modal-back').click(function (e) {
         e.preventDefault()
-        closeModal($(this).closest('.modal').attr('id'))
+        closeModal(jQuery(this).closest('.modal').attr('id'))
     })
 
-    $('.modal button[type="submit"]').click(function () {
-        $(this).closest('.modal').find('.modal-success').show()
-        $(this).closest('form').hide()
+    jQuery('.modal button[type="submit"]').click(function () {
+        jQuery(this).closest('.modal').find('.modal-success').show()
+        jQuery(this).closest('form').hide()
     })
 
-    $('.modal-success .close-modal').click(e => {
-        $('.modal').removeClass('show')
-        $('html,body').removeClass('modal-active')
+    jQuery('.modal-success .close-modal').click(e => {
+        jQuery('.modal').removeClass('show')
+        jQuery('html,body').removeClass('modal-active')
     })
 
-    let dinamics = $('.dinamics')
+    let dinamics = jQuery('.dinamics')
 
-    $('.dinamics img').each((i, el) => {
+    jQuery('.dinamics img').each((i, el) => {
         el.addEventListener('animationend', function () {
-            $(this).removeClass('animate')
-            if ($(this).is(':last-child')) {
+            jQuery(this).removeClass('animate')
+            if (jQuery(this).is(':last-child')) {
                 dinamics.find('img:first-child').addClass('animate')
             } else {
-                $(this).next('img').addClass('animate')
+                jQuery(this).next('img').addClass('animate')
             }
 
         })
@@ -325,37 +333,37 @@ jQuery(document).ready(function () {
         breakpoints: [576, 768, 1201]
     });
 
-    $('.form-part button[type="submit"]').click(function() {
-        let form = $(this).closest('form')
+    jQuery('.form-part button[type="submit"]').click(function() {
+        let form = jQuery(this).closest('form')
         if (form.find('input.select-input').val() === 'member') {
             openModal('member-modal')
-            let modal = $('#member-modal')
+            let modal = jQuery('#member-modal')
             modal.find('input[name="name"]').val(form.find('input[name="name"]').val())
             modal.find('input[name="email"]').val(form.find('input[name="email"]').val())
             modal.find('input[name="phone"]').val(form.find('input[name="phone"]').val())
         }
         if (form.find('input.select-input').val() === 'speaker') {
             openModal('speaker-modal')
-            let modal = $('#speaker-modal')
+            let modal = jQuery('#speaker-modal')
             modal.find('input[name="name"]').val(form.find('input[name="name"]').val())
             modal.find('input[name="email"]').val(form.find('input[name="email"]').val())
             modal.find('input[name="phone"]').val(form.find('input[name="phone"]').val())
         }
         if (form.find('input.select-input').val() === 'sponsor') {
             openModal('sponsor-modal')
-            let modal = $('#sponsor-modal')
+            let modal = jQuery('#sponsor-modal')
             modal.find('input[name="name"]').val(form.find('input[name="name"]').val())
             modal.find('input[name="email"]').val(form.find('input[name="email"]').val())
             modal.find('input[name="phone"]').val(form.find('input[name="phone"]').val())
         }
     })
 
-    $('section').each(function(i, el) {
-        if ($(window).width() < 992) return
-        $(window).scroll(function() {
-            let yPos = ($(window).scrollTop() - $(el).position().top) / $(el).data('bg-speed');
+    jQuery('section').each(function(i, el) {
+        if (jQuery(window).width() < 992) return
+        jQuery(window).scroll(function() {
+            let yPos = (jQuery(window).scrollTop() - jQuery(el).position().top) / jQuery(el).data('bg-speed');
             let coords = 'center '+ yPos + 'px';
-            $(el).css({ backgroundPosition: coords });
+            jQuery(el).css({ backgroundPosition: coords });
         })
     })
 })
