@@ -472,7 +472,6 @@
             }
 
             &__content {
-                margin-top: 15px;
                 width: initial;
             }
         }
@@ -486,7 +485,7 @@
     }
 
     .guestprog-slider {
-        margin-top: 0;
+        margin-top: 20px;
     }
 
     .img-slider {
@@ -617,6 +616,19 @@
             &__img {
                 display: block;
             }
+        }
+    }
+
+    .guestprog-slider {
+        max-width: none;
+        background: none;
+        backdrop-filter: none;
+    }
+
+    .guestprog-slide {
+        &__content {
+            background: rgba(196, 196, 196, .2);
+            backdrop-filter: blur(42px);
         }
     }
 }
