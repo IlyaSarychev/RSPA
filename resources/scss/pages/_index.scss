@@ -4,7 +4,6 @@
     position: relative;
     overflow: hidden;
     background: url('../img/bg-gradient.svg');
-    background-size: cover;
 
     .wrapper {
         margin-top: 260px;
@@ -189,7 +188,7 @@
         display: flex;
         align-items: flex-end;
         justify-content: space-between;
-        margin-bottom: 40px;
+        margin-bottom: 50px;
     }
 
     .info-wrapper {
@@ -280,7 +279,7 @@
 
 .noms {
     width: 100%;
-    margin-bottom: 75px;
+    margin-bottom: 40px;
 
     &-gradient {
         display: none;
@@ -292,6 +291,8 @@
     width: 100%;
     grid-template-columns: 530px 1fr;
     grid-column-gap: 20px;
+    border-bottom: 1px solid rgba(255,255,255,.5);
+    padding: 40px 0;
 
     &__title {
         position: relative;
@@ -316,15 +317,6 @@
         font-size: 122px;
         top: -20px;
         left: 0;
-    }
-
-    &:not(:last-child) {
-        padding-bottom: 35px;
-        border-bottom: 1px solid rgba(255,255,255,.5);
-    }
-
-    &:not(:first-child) {
-        padding-top: 40px;
     }
 
     &:first-child {
@@ -354,7 +346,7 @@
     }
 
     &--first {
-        // grid-template-columns: repeat(2, 1fr);
+        padding: 0 0 35px;
         display: block;
 
         .nom-row {

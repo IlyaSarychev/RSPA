@@ -1,12 +1,12 @@
 jQuery(document).ready(function () {
 
-    jQuery(window).scroll(function () {
-        if (jQuery(window).scrollTop() > 100) {
-            jQuery('.header').addClass('header--scroll')
-        } else {
-            jQuery('.header').removeClass('header--scroll')
-        }
-    })
+    // jQuery(window).scroll(function () {
+    //     if (jQuery(window).scrollTop() > 100) {
+    //         jQuery('.header').addClass('header--scroll')
+    //     } else {
+    //         jQuery('.header').removeClass('header--scroll')
+    //     }
+    // })
 
     let workprogSlider = jQuery('.workprog-slider').slick({
         autoplay: false,
@@ -373,4 +373,12 @@ jQuery(document).ready(function () {
             jQuery(el).css({ backgroundPosition: coords });
         })
     })
+
+    $('.section-offer').css({
+        'backgroundPositionY': '-50vh'
+    })
+
+    $('.section-offer').animate({
+        'backgroundPositionY': '0px'
+    }, 2000)
 })
