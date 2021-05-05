@@ -1,13 +1,5 @@
 jQuery(document).ready(function () {
 
-    // jQuery(window).scroll(function () {
-    //     if (jQuery(window).scrollTop() > 100) {
-    //         jQuery('.header').addClass('header--scroll')
-    //     } else {
-    //         jQuery('.header').removeClass('header--scroll')
-    //     }
-    // })
-
     let workprogSlider = jQuery('.workprog-slider').slick({
         autoplay: false,
         arrows: false,
@@ -15,6 +7,7 @@ jQuery(document).ready(function () {
         speed: 1500,
         waitForAnimate: false,
         speed: 0,
+        asNavFor: '.work-img-slider',
         responsive: [
             {
                 breakpoint: 991,
@@ -35,6 +28,13 @@ jQuery(document).ready(function () {
 
     jQuery('.workprog-slider-arrows .arrow--next').click(() => {
         workprogSlider.slick('slickNext')
+    })
+
+    let workImgSlider = $('.work-img-slider').slick({
+        arrows: false,
+        asNavFor: '.workprog-slider',
+        speed: 0,
+        fade: true
     })
 
     let guestprogSlider = jQuery('.guestprog-slider').slick({

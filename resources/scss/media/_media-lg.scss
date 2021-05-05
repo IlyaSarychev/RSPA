@@ -603,4 +603,20 @@
             max-width: 265px;
         }
     }
+
+    .work-img-slider {
+        display: none;
+    }
+
+    .workprog-slide {
+        max-width: none;
+    }
+
+    .workprog-slider {
+        .workprog-slide {
+            &__img {
+                display: block;
+            }
+        }
+    }
 }
