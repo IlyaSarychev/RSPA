@@ -72,6 +72,10 @@
 
 @keyframes din-rotate {
     0% {
+        transform: rotate(-50deg);
+    }
+
+    10% {
         opacity: 1;
         transform: rotate(0);
     }

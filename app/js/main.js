@@ -314,18 +314,25 @@ jQuery(document).ready(function () {
     })
 
     let dinamics = jQuery('.dinamics')
+    dinamics.find('img:first-child').addClass('animate')
+    setTimeout(() => {
+        dinamics.find('img:first-child').removeClass('animate')
+    }, 4000)
 
-    jQuery('.dinamics img').each((i, el) => {
-        el.addEventListener('animationend', function () {
-            jQuery(this).removeClass('animate')
-            if (jQuery(this).is(':last-child')) {
-                dinamics.find('img:first-child').addClass('animate')
-            } else {
-                jQuery(this).next('img').addClass('animate')
-            }
-
-        })
-    })
+    setInterval(() => {
+        let curDinamic = dinamics.find('img.animate').last()
+        if (curDinamic.is(':last-child')) {
+            dinamics.find('img:first-child').addClass('animate')
+            setTimeout(() => {
+                dinamics.find('img:first-child').removeClass('animate')
+            }, 4000)
+        } else {
+            curDinamic.next('img').removeClass('animate').addClass('animate')
+            setTimeout(() => {
+                curDinamic.next('img').removeClass('animate')
+            }, 4000)
+        }
+    }, 3200)
 
     let rellax = new Rellax('.parallax', {
         center: true,
