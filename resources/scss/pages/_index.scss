@@ -734,6 +734,12 @@
     }
 }
 
+@media screen and (min-width: $lg) {
+    .parallax {
+        transition: .3s;
+    }
+}
+
 @import '../media/media-xxl';
 @import '../media/media-xl';
 @import '../media/media-lg';
