@@ -176,14 +176,6 @@
     padding: 100px 0 75px;
     position: relative;
     overflow: hidden;
-    
-
-    .bg-gradient {
-        width: 1185px;
-        height: 660px;
-        left: -250px;
-        top: -245px;
-    }
 
     .title-wrapper {
         width: 100%;
@@ -224,7 +216,7 @@
     align-items: center;
     background: rgba(255,255,255,.1);
     border-radius: 20px;
-    transition: .3s;
+    transition: background .3s;
 
     &__text {
         color: $white;
@@ -736,7 +728,7 @@
 
 @media screen and (min-width: $lg) {
     .parallax {
-        transition: .3s;
+        transition: background-position .3s;
     }
 }
 

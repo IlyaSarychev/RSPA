@@ -217,6 +217,9 @@
                 grid-column: 1 / 2;
                 width: fit-content;
                 margin-top: 50px;
+                &:disabled {
+                    opacity: .3;
+                }
             }
         }
     }

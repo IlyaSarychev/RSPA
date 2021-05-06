@@ -646,13 +646,13 @@
                     <h2 class="title">Принять участие</h2>
                     <form action="#" method="POST" class="form-part">
                         <div class="form-group">
-                            <input type="text" placeholder="ФИО*" name="name">
+                            <input type="text" required placeholder="ФИО*" name="name">
                         </div>
                         <div class="form-group">
-                            <input type="email" placeholder="E-mail*" name="email">
+                            <input type="email" required placeholder="E-mail*" name="email">
                         </div>
                         <div class="form-group">
-                            <input type="tel" placeholder="Телефон*" name="phone">
+                            <input type="tel" required placeholder="Телефон*" name="phone">
                         </div>
                         <div class="form-group">
                             <div class="select">
@@ -676,7 +676,7 @@
                                     <div class="select__item" data-type="sponsor">Спонсор</div>
                                 </div>
                             </div>
-                            <input type="hidden" class="select-input" name="type">
+                            <input type="hidden" class="select-input" required name="type">
                         </div>
                         <div class="form-part__wrapper">
                             <button class="button button--blue" type="submit" disabled>ЗАполнить анкету</button>
@@ -810,21 +810,21 @@
                     <form action="#" method="POST" class="form-quest">
                         <h3 class="form-quest__title">Контакты</h3>
                         <div class="form-group">
-                            <input type="text" placeholder="ФИО*" name="name">
+                            <input type="text" placeholder="ФИО*" required name="name">
                         </div>
                         <div class="form-group">
-                            <input type="email" placeholder="E-mail*" name="email">
+                            <input type="email" placeholder="E-mail*" required name="email">
                         </div>
                         <div class="form-group">
-                            <input type="tel" placeholder="Телефон*" name="phone">
+                            <input type="tel" placeholder="Телефон*" required name="phone">
                         </div>
                         <div class="form-quest__hr"></div>
                         <h3 class="form-quest__title">Данные Организации</h3>
                         <div class="form-group">
-                            <input type="text" placeholder="Наименование компании (бренд-наименование)*">
+                            <input type="text" placeholder="Наименование компании (бренд-наименование)*" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" placeholder="Юридическое название**">
+                            <input type="text" placeholder="Юридическое название**" required>
                         </div>
                         <div class="form-group">
                             <div class="input-file">
@@ -846,11 +846,11 @@
                         <div class="form-quest__hr"></div>
                         <h3 class="form-quest__title">Проект</h3>
                         <div class="form-group">
-                            <input type="text" placeholder="Наименование проекта*">
+                            <input type="text" placeholder="Наименование проекта*" required>
                         </div>
                         <div class="form-group">
                             <div class="input-file">
-                                <input id="photo" type="file">
+                                <input id="photo" type="file" required>
                                 <label for="photo">
                                     <span class="input-file__text">Заглавная фотография*</span>
                                     <div class="input-file__icon">
@@ -865,7 +865,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <input type="text" placeholder="Заказчик*">
+                            <input type="text" placeholder="Заказчик*" required>
                         </div>
                         <div class="form-group">
                             <div class="select">
@@ -889,7 +889,7 @@
                                     <div class="select__item" data-type="sponsor">Спонсор</div>
                                 </div>
                             </div>
-                            <input type="hidden" class="select-input" name="nom">
+                            <input type="hidden" class="select-input" required name="nom">
                         </div>
                         <div class="form-quest__tip">
                             *Размещая проект, участник подтверждает собственное право и наличие согласия заказчика на
@@ -897,13 +897,14 @@
                         </div>
                         <div class="form-group form-group--wide">
                             <textarea name="description"
+                                required
                                 placeholder="Описание проекта*
 
 (Опишите для членов жюри, почему вы считаете данный проект достойным получить премию: в чем заключается уникальность проекта (работы), креативная идея, сложность исполнения, с какими задачами и трудностями вы работали и как их решали)"></textarea>
                         </div>
                         <div class="form-group">
                             <div class="input-file">
-                                <input id="pres" type="file">
+                                <input id="pres" type="file" required>
                                 <label for="pres">
                                     <span class="input-file__text">Презентация проекта* (pdf, до 40 мб)</span>
                                     <div class="input-file__icon">
@@ -932,7 +933,7 @@
                         <div class="form-group">
                             <input type="text" placeholder="Аудио с проекта (ссылка на файлобменник, до 50 мб)">
                         </div>
-                        <button class="button" type="submit">Отправить анкету</button>
+                        <button class="button" type="submit" disabled>Отправить анкету</button>
                     </form>
                     <div class="modal-success">
                         <p class="modal-success__text">
@@ -1015,18 +1016,18 @@
                     <form action="#" method="POST" class="form-quest">
                         <h3 class="form-quest__title">Контакты</h3>
                         <div class="form-group">
-                            <input type="text" placeholder="ФИО*" name="name">
+                            <input type="text" placeholder="ФИО*" required name="name">
                         </div>
                         <div class="form-group">
-                            <input type="email" placeholder="E-mail*" name="email">
+                            <input type="email" placeholder="E-mail*" required name="email">
                         </div>
                         <div class="form-group">
-                            <input type="tel" placeholder="Телефон*" name="phone">
+                            <input type="tel" placeholder="Телефон*" required name="phone">
                         </div>
                         <div class="form-quest__hr"></div>
                         <h3 class="form-quest__title">Спич</h3>
                         <div class="form-group">
-                            <input type="text" placeholder="Тема*">
+                            <input type="text" placeholder="Тема*" required>
                         </div>
                         <div class="form-group">
                             <div class="input-file">
@@ -1046,11 +1047,12 @@
                         </div>
                         <div class="form-group form-group--wide">
                             <textarea name="description-speaker"
+                                required
                                 placeholder="Описание проекта*
 
 (Опишите для членов жюри, почему вы считаете данный проект достойным получить премию: в чем заключается уникальность проекта (работы), креативная идея, сложность исполнения, с какими задачами и трудностями вы работали и как их решали)"></textarea>
                         </div>
-                        <button class="button" type="submit">Отправить анкету</button>
+                        <button class="button" type="submit" disabled>Отправить анкету</button>
                     </form>
                     <div class="modal-success">
                         <p class="modal-success__text">
@@ -1133,21 +1135,21 @@
                     <form action="#" method="POST" class="form-quest">
                         <h3 class="form-quest__title">Контакты</h3>
                         <div class="form-group">
-                            <input type="text" placeholder="ФИО*" name="name">
+                            <input type="text" placeholder="ФИО*" required name="name">
                         </div>
                         <div class="form-group">
-                            <input type="email" placeholder="E-mail*" name="email">
+                            <input type="email" placeholder="E-mail*" required name="email">
                         </div>
                         <div class="form-group">
-                            <input type="tel" placeholder="Телефон*" name="phone">
+                            <input type="tel" placeholder="Телефон*" required name="phone">
                         </div>
                         <div class="form-quest__hr"></div>
                         <h3 class="form-quest__title">Данные Организации</h3>
                         <div class="form-group">
-                            <input type="text" placeholder="Наименование компании (бренд-наименование)*">
+                            <input type="text" placeholder="Наименование компании (бренд-наименование)*" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" placeholder="Юридическое название**">
+                            <input type="text" placeholder="Юридическое название**" required>
                         </div>
                         <div class="form-group">
                             <div class="input-file">
@@ -1165,7 +1167,7 @@
                                 </label>
                             </div>
                         </div>
-                        <button class="button" type="submit">Отправить анкету</button>
+                        <button class="button" type="submit" disabled>Отправить анкету</button>
                     </form>
                     <div class="modal-success">
                         <p class="modal-success__text">
@@ -1228,6 +1230,7 @@
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="libs/slick.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
+    <script src="libs/jquery.mask.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 

@@ -30,7 +30,7 @@ jQuery(document).ready(function () {
         workprogSlider.slick('slickNext')
     })
 
-    let workImgSlider = $('.work-img-slider').slick({
+    let workImgSlider = jQuery('.work-img-slider').slick({
         arrows: false,
         asNavFor: '.workprog-slider',
         speed: 0,
@@ -235,32 +235,6 @@ jQuery(document).ready(function () {
         e.preventDefault()
     })
 
-    jQuery('form input').change(function () {
-        let form = jQuery(this).closest('form')
-
-        form.find('input').each((i, el) => {
-
-            if (jQuery(el).val().length) {
-                jQuery(el).addClass('valid')
-            }
-
-            if (jQuery(el).attr('type') === 'file') {
-                if (el.files.length) {
-                    jQuery(el).addClass('valid')
-                    jQuery(el).closest('.input-file').addClass('contains')
-                    jQuery(el).next('label').find('.input-file__text').text(el.files[0].name)
-                }
-            }
-        })
-
-        if (form.find('input:not(.valid)').length) {
-            form.find('button[type="submit"]').attr('disabled', true)
-        } else {
-            form.find('button[type="submit"]').attr('disabled', false)
-        }
-    })
-
-
     jQuery('.modal').on('click', function (e) {
         if (e.target.classList.contains('modal')) {
             jQuery('.modal.show').removeClass('show');
@@ -345,23 +319,23 @@ jQuery(document).ready(function () {
         if (form.find('input.select-input').val() === 'member') {
             openModal('member-modal')
             let modal = jQuery('#member-modal')
-            modal.find('input[name="name"]').val(form.find('input[name="name"]').val())
-            modal.find('input[name="email"]').val(form.find('input[name="email"]').val())
-            modal.find('input[name="phone"]').val(form.find('input[name="phone"]').val())
+            modal.find('input[name="name"]').val(form.find('input[name="name"]').val()).addClass('valid')
+            modal.find('input[name="email"]').val(form.find('input[name="email"]').val()).addClass('valid')
+            modal.find('input[name="phone"]').val(form.find('input[name="phone"]').val()).addClass('valid')
         }
         if (form.find('input.select-input').val() === 'speaker') {
             openModal('speaker-modal')
             let modal = jQuery('#speaker-modal')
-            modal.find('input[name="name"]').val(form.find('input[name="name"]').val())
-            modal.find('input[name="email"]').val(form.find('input[name="email"]').val())
-            modal.find('input[name="phone"]').val(form.find('input[name="phone"]').val())
+            modal.find('input[name="name"]').val(form.find('input[name="name"]').val()).addClass('valid')
+            modal.find('input[name="email"]').val(form.find('input[name="email"]').val()).addClass('valid')
+            modal.find('input[name="phone"]').val(form.find('input[name="phone"]').val()).addClass('valid')
         }
         if (form.find('input.select-input').val() === 'sponsor') {
             openModal('sponsor-modal')
             let modal = jQuery('#sponsor-modal')
-            modal.find('input[name="name"]').val(form.find('input[name="name"]').val())
-            modal.find('input[name="email"]').val(form.find('input[name="email"]').val())
-            modal.find('input[name="phone"]').val(form.find('input[name="phone"]').val())
+            modal.find('input[name="name"]').val(form.find('input[name="name"]').val()).addClass('valid')
+            modal.find('input[name="email"]').val(form.find('input[name="email"]').val()).addClass('valid')
+            modal.find('input[name="phone"]').val(form.find('input[name="phone"]').val()).addClass('valid')
         }
     })
 
@@ -374,11 +348,80 @@ jQuery(document).ready(function () {
         })
     })
 
-    $('.section-offer').css({
+    jQuery('.section-offer').css({
         'backgroundPositionY': '-50vh'
     })
 
-    $('.section-offer').animate({
+    jQuery('.section-offer').animate({
         'backgroundPositionY': '0px'
     }, 2000)
+
+    $('input[type="tel"]').mask('+0 (000) 000-00-00', {
+        onKeyPress(cep, event, currentField) {
+            let form = currentField.closest('form')
+            if (currentField.val().length == currentField.attr('maxlength')) {
+                currentField.addClass('valid')
+                changeSubmitDisabling(form)
+            } else {
+                currentField.removeClass('valid')
+                changeSubmitDisabling(form)
+            }
+        }
+    })
+
+    $('textarea').change(function() {
+        let form = $(this).closest('form')
+
+        if ($(this).attr('required') !== 'required') return
+
+        if (jQuery(this).val().length >= 3) {
+            jQuery(this).addClass('valid')
+            return changeSubmitDisabling(form)
+        } else if ($(this).attr('type') === 'text') {
+            jQuery(this).removeClass('valid')
+            return changeSubmitDisabling(form)
+        }
+    })
+
+    $('input[type="file"]').change(function() {
+        if (this.files.length) {
+            jQuery(this).addClass('valid')
+            jQuery(this).closest('.input-file').addClass('contains')
+            jQuery(this).next('label').find('.input-file__text').text(this.files[0].name)
+            if ($(this).attr('required') === 'required') {
+                changeSubmitDisabling($(this).closest('form'))
+            }
+        }
+    })
+
+    
+    $('input').change(function() {
+        let form = $(this).closest('form')
+
+        if ($(this).attr('required') !== 'required') return
+
+        if ($(this).attr('type') === 'text' && jQuery(this).val().length >= 3) {
+            jQuery(this).addClass('valid')
+            return changeSubmitDisabling(form)
+        } else if ($(this).attr('type') === 'text') {
+            jQuery(this).removeClass('valid')
+            return changeSubmitDisabling(form)
+        }
+
+        if ($(this).attr('type') === 'email' && /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/.test($(this).val())) {
+            jQuery(this).addClass('valid')
+            return changeSubmitDisabling(form)
+        } else if ($(this).attr('type') === 'email') {
+            jQuery(this).removeClass('valid')
+            return changeSubmitDisabling(form)
+        }
+    })
+
+    function changeSubmitDisabling(form) {
+        if (form.find('input[required]:not(.valid)').length) {
+            form.find('button[type="submit"]').attr('disabled', true)
+        } else {
+            form.find('button[type="submit"]').attr('disabled', false)
+        }
+    }
 })
